@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBD2 Remote Control</title>
+</head>
+<body>
+    <h1>Удалённое управление OBD2-сканером</h1>
+    <form id="command-form">
+        <label for="command">Введите команду:</label>
+        <input type="text" id="command" name="command" required>
+        <button type="submit">Отправить</button>
+    </form>
+    <pre id="response"></pre>
+
+    <script>
+        const form = document.getElementById('command-form');
+        const responseContainer = document.getElementById('response');
+
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const command = document.getElementById('command').value;
+            const response = await fetch('/send_command', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ 'command': command })
+            });
+            const data = await response.json();
+            if (data.status === "success") {
+                responseContainer.textContent = `Ответ на команду "${data.command}":\n${data.response}`;
+            } else {
+                responseContainer.textContent = `Ошибка: ${data.message}`;
+            }
+        };
+    </script>
+</body>
+</html>
