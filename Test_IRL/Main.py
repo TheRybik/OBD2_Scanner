@@ -1,5 +1,6 @@
 import bluetooth
 import time
+import sqlite3
 
 # Адрес MAC OBD2-адаптера
 OBD2_MAC_ADDRESS = "83:A4:96:4D:7E:AF"
@@ -20,7 +21,7 @@ def send_command(socket, command):
     """Отправка команды на ELM327 и получение ответа"""
     try:
         socket.send((command + "\r\n").encode("utf-8"))
-        time.sleep(1)  # Задержка для получения ответа
+        time.sleep(0.2)  # Уменьшение задержки для повышения скорости работы
         response = socket.recv(1024).decode("utf-8").strip()
         return response
     except Exception as e:
@@ -100,6 +101,44 @@ def parse_error_codes(response):
     
     return error_codes
 
+def check_pid_support(socket):
+    """Проверка поддерживаемых PID"""
+    supported_pids = set()
+    for pid_range in ["0100", "0120", "0140", "0160"]:
+        response = send_command(socket, pid_range)
+        if response and response.startswith("41"):
+            bits = bin(int(response[4:], 16))[2:].zfill(32)
+            for i, bit in enumerate(bits):
+                if bit == "1":
+                    supported_pids.add(f"{pid_range[:2]}{hex(int(pid_range[2:], 16) + i)[2:].upper()}")
+    return supported_pids
+
+def save_to_db(data):
+    """Сохранение данных в SQLite"""
+    conn = sqlite3.connect("obd2_data.db")
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS obd2_data (timestamp TEXT, pid TEXT, value TEXT)")
+    for pid, value in data.items():
+        cursor.execute("INSERT INTO obd2_data (timestamp, pid, value) VALUES (datetime('now'), ?, ?)", (pid, value))
+    conn.commit()
+    conn.close()
+
+def real_time_mode(socket, supported_pids, interval=1):
+    """Режим получения данных в реальном времени"""
+    try:
+        print("Режим реального времени. Нажмите Ctrl+C для выхода.")
+        while True:
+            data = {}
+            for pid in supported_pids:
+                response = send_command(socket, pid)
+                if response:
+                    data[pid] = parse_response(pid, response)
+            save_to_db(data)
+            print(data)
+            time.sleep(interval)
+    except KeyboardInterrupt:
+        print("Выход из режима реального времени.")
+
 def main():
     # Подключение к OBD2-сканеру
     socket = connect_to_obd2()
@@ -108,12 +147,14 @@ def main():
         return
 
     # Инициализация и базовые команды
-    basic_commands = ["ATZ", "ATE0", "ATL0"]
-    for command in basic_commands:
-        send_command(socket, command)
-        time.sleep(0.5)
+    protocol_choice = input("Введите протокол (например, 0 для автоопределения, 6 для CAN): ")
+    send_command(socket, f"ATSP{protocol_choice}")
+    send_command(socket, "ATZ")
+    send_command(socket, "ATE0")
 
-    # Команды для мониторинга
+    supported_pids = check_pid_support(socket)
+    print(f"Поддерживаемые PID: {supported_pids}")
+
     commands = {
         "Обороты двигателя (RPM)": "010C",
         "Температура охлаждающей жидкости": "0105",
@@ -126,15 +167,31 @@ def main():
         "Коды ошибок": "03"
     }
 
-    print("\nОтправка команд и получение данных:\n")
-    for name, command in commands.items():
-        print(f"Команда: {name}")
-        response = send_command(socket, command)
-        if response:
-            parsed_response = parse_response(command, response)
-            print(f"Ответ: {parsed_response}\n")
+    while True:
+        mode = input("Выберите режим (1 - Сканирование, 2 - Реальное время, 3 - Ручной ввод, 0 - Выход): ")
+        if mode == "1":
+            print("\nОтправка команд и получение данных:\n")
+            data = {}
+            for name, command in commands.items():
+                print(f"Команда: {name}")
+                response = send_command(socket, command)
+                if response:
+                    parsed_response = parse_response(command, response)
+                    data[command] = parsed_response
+                    print(f"Ответ: {parsed_response}\n")
+                else:
+                    print(f"Нет ответа от устройства на команду {name}.\n")
+            save_to_db(data)
+        elif mode == "2":
+            real_time_mode(socket, supported_pids)
+        elif mode == "3":
+            user_command = input("Введите команду: ")
+            response = send_command(socket, user_command)
+            print(response)
+        elif mode == "0":
+            break
         else:
-            print(f"Нет ответа от устройства на команду {name}.\n")
+            print("Неверный выбор.")
 
     # Закрытие соединения
     socket.close()
@@ -142,16 +199,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-# Добавить проверку наличия поддержки PID в машине, и не вывода его в случае если PID не поддерживается машиной.
-# Мэйби замена автоопределения протокола на протокол по выбору, делаемому с помощью PID проверки поддерживаемого протокола.
-# Создание режима заготовленного сканироования заранее (определенных PID подряд за счет 1 кнопки)
-# Сделать сохранение заготовленных сканирований в БД (пункта 3)
-# Сделать режим получения данных в реальном времени (За счет цикла)
-# Реализовать ввод пользовательских команд (по сути давать вводить запросы в ручную)
-# Фронт
-# Визуализация
-# Тесты
-# Развертка
