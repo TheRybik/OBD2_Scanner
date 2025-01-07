@@ -1,5 +1,6 @@
 import bluetooth
 
+# connection.py
 class OBD2Connection:
     def __init__(self, mac_address, port):
         self.mac_address = mac_address
