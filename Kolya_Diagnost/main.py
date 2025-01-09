@@ -5,7 +5,7 @@ from connection import OBD2Connection
 
 def main():
     # Подключение к OBD2-сканеру
-    connection = OBD2Connection("83:A4:96:4D:7E:AF", 1)
+    connection = OBD2Connection("83:A4:96:4D:7E:AF", 1) #Сделать вводом от пользователя мак адрес, добавить пояснение как найти инфу.
     connection.connect()
 
     send_command(connection.socket, "ATZ")
@@ -15,7 +15,7 @@ def main():
     print(f"Поддерживаемые PID: {supported_pids}")
 
     while True:
-        mode = input("Выберите режим (1 - Сканирование, 2 - Реальное время, 3 - Ручной ввод, 0 - Выход): ")
+        mode = input("Выберите режим (1 - Сканирование, 2 - Реальное время, 3 - Ручной ввод, 0 - Выход): ") #Добавить режимы связанные с ошибками, отправкой результатов тестов в БД.
         if mode == "1":
             data = {}
             for pid in supported_pids:
