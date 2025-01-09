@@ -16,14 +16,28 @@ def check_pid_support(socket):
 def real_time_mode(socket, supported_pids, interval=1):
     try:
         print("Режим реального времени. Нажмите Ctrl+C для выхода.")
-        print("Доступные PID:")
-        for pid, description in OBD2_COMMANDS.items():
-            print(f"{pid}: {description['description']}")
+        print("Доступные команды для выбора:")
+        for pid, details in OBD2_COMMANDS.items():
+            print(f"{pid}: {details['description']}")
+
+        # Получение выбора пользователя
+        selected_pids = input("Введите через запятую PID-ы интересующих команд: ").split(',')
+        selected_pids = [pid.strip() for pid in selected_pids if pid.strip() in OBD2_COMMANDS]
+
+        if not selected_pids:
+            print("Вы не выбрали ни одной команды. Завершение работы.")
+            return
+
+        print("Выбранные команды:")
+        for pid in selected_pids:
+            print(f"{pid}: {OBD2_COMMANDS[pid]['description']}")
+
+        print("Начинаю сбор данных. Нажмите Ctrl+C для выхода.")
 
         while True:
             data = {}
-            for pid in supported_pids:
-                if pid in OBD2_COMMANDS:
+            for pid in selected_pids:
+                if pid in supported_pids and pid in OBD2_COMMANDS:
                     response = send_command(socket, pid)
                     if response:
                         data[pid] = parse_response(pid, response)
