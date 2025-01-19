@@ -10,6 +10,7 @@ def check_pid_support(socket):
     """
     commands = ["0100", "0120", "0140", "0160"]
     supported_pids = set()
+    multiplier = 0
 
     for command in commands:
         try:
@@ -18,7 +19,7 @@ def check_pid_support(socket):
             print(f"> Command: {command}, Raw Response: {raw_response.strip()}")
 
             # Чистим ответ от лишних символов
-            cleaned_response = ''.join(filter(str.isalnum, raw_response)).upper()
+            cleaned_response = ''.join(filter(str.isalnum, raw_response)).upper() # Эти моменты мб стоит вынести в сам send_command, или в отдельную функцию
             print(f"Cleaned Response: {cleaned_response}")
 
             # Проверяем длину и формат
@@ -26,10 +27,12 @@ def check_pid_support(socket):
                 print(f", error: Invalid response format: {cleaned_response}")
                 continue
 
+            # Подсчет множителя для PID
+            multiplier = int((int(command) - 100) / 20)
+
             # Парсим поддержку PID через вспомогательную функцию
-            base_pid = (int(command[2:], 16) - 0x00) * 32  # Смещение начинается с 0x00
-            parsed_pids = parse_supported_pids(cleaned_response)
-            supported_pids.update(pid + base_pid for pid in parsed_pids)
+            parsed_pids = Availaible_PID_Parser(cleaned_response, multiplier)
+            supported_pids.update(pid for pid in parsed_pids)
 
         except Exception as e:
             print(f"Error processing command {command}: {e}")
@@ -37,42 +40,19 @@ def check_pid_support(socket):
     print(f"Поддерживаемые PID: {sorted(supported_pids)}")
     return supported_pids
 
-def parse_supported_pids(raw_response):
-    """
-    Парсит очищенные сырые данные ответа ELM327 и возвращает множество поддерживаемых PID.
-    """
-    try:
-        # Преобразуем ответ в список байтов
-        raw_bytes = bytes.fromhex(raw_response[4:])  # Пропускаем "41 XX"
-        supported_pids = set()
+def Availaible_PID_Parser(hex_number, x=0):
 
-        # Проходим по каждому байту и извлекаем поддерживаемые PID
-        for byte_index, byte in enumerate(raw_bytes):
-            for bit_index in range(8):
-                if byte & (1 << (7 - bit_index)):  # Проверяем, установлен ли бит
-                    pid = byte_index * 8 + bit_index + 1  # Рассчитываем PID
-                    supported_pids.add(pid)
+    # Отрезаем первые 4 байта служебной информации
+    hex_trimmed = hex_number[4:]
 
-        return supported_pids
+    # Преобразуем в двоичный вид
+    binary_string = bin(int(hex_trimmed, 16))[2:].zfill(len(hex_trimmed) * 4)
 
-    except Exception as e:
-        print(f"Error parsing response: {e}")
-        return set()
-
-def hex_to_bin_process(hex_number):
-    # Переводим шестнадцатеричное число в двоичный вид
-    binary_string = bin(int(hex_number, 16))[2:]  # Преобразуем в двоичную строку и отсекаем '0b'
-
-    # Убираем первые 4 символа шестнадцатеричного числа (16 бит)
-    binary_string = binary_string[len(bin(0x10000)[3:]):]
-
-    # Проверяем каждый бит и сохраняем номера установленных битов
+    # Сохраняем номера в шестнадцатиричном формате
     result = []
     for i, bit in enumerate(binary_string, start=1):
-        if i > 20:  # Учитываем только первые 20 бит
-            break
         if bit == '1':
-            result.append(i)
+            result.append(f"01{i + x * 0x20:02X}")
 
     return result
 

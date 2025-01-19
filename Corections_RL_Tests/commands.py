@@ -51,20 +51,9 @@ ERROR_CODES = {                     # Расписать подробнее ка
     "U1": "Особые ошибки сети",
 }
 
-# def send_command(socket, command):
-#     try:
-#         socket.send((command + "\r\n").encode("utf-8"))
-#         time.sleep(0.2)
-#         response = socket.recv(1024).decode("utf-8").strip()
-#         return response
-#     except Exception as e:
-#         print(f"Ошибка при отправке команды: {e}")
-#         return None
-
 def clear_buffer(socket):
     while socket.recv(1024):
         pass
-
 
 def send_command(socket, command):
     try:
