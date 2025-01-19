@@ -34,9 +34,8 @@ def main():
         mode = input("Выберите режим: ")
         if mode == "1":
             data = {}
-            #for pid in supported_pids:
-            for pid in OBD2_COMMANDS:
-                #if pid in OBD2_COMMANDS:
+            for pid in supported_pids:
+                if pid in OBD2_COMMANDS:
                     response = send_command(connection.socket, pid)
                     if response:
                         data[pid] = parse_response(pid, response)
