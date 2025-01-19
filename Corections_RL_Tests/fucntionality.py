@@ -37,16 +37,44 @@ def check_pid_support(socket):
     print(f"Поддерживаемые PID: {sorted(supported_pids)}")
     return supported_pids
 
-
-
-
-def save_results_to_file(data, filename="results.json"):
+def parse_supported_pids(raw_response):
+    """
+    Парсит очищенные сырые данные ответа ELM327 и возвращает множество поддерживаемых PID.
+    """
     try:
-        with open(filename, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
-        print(f"Результаты успешно сохранены в файл {filename}")
+        # Преобразуем ответ в список байтов
+        raw_bytes = bytes.fromhex(raw_response[4:])  # Пропускаем "41 XX"
+        supported_pids = set()
+
+        # Проходим по каждому байту и извлекаем поддерживаемые PID
+        for byte_index, byte in enumerate(raw_bytes):
+            for bit_index in range(8):
+                if byte & (1 << (7 - bit_index)):  # Проверяем, установлен ли бит
+                    pid = byte_index * 8 + bit_index + 1  # Рассчитываем PID
+                    supported_pids.add(pid)
+
+        return supported_pids
+
     except Exception as e:
-        print(f"Ошибка при сохранении результатов: {e}")
+        print(f"Error parsing response: {e}")
+        return set()
+
+def hex_to_bin_process(hex_number):
+    # Переводим шестнадцатеричное число в двоичный вид
+    binary_string = bin(int(hex_number, 16))[2:]  # Преобразуем в двоичную строку и отсекаем '0b'
+
+    # Убираем первые 4 символа шестнадцатеричного числа (16 бит)
+    binary_string = binary_string[len(bin(0x10000)[3:]):]
+
+    # Проверяем каждый бит и сохраняем номера установленных битов
+    result = []
+    for i, bit in enumerate(binary_string, start=1):
+        if i > 20:  # Учитываем только первые 20 бит
+            break
+        if bit == '1':
+            result.append(i)
+
+    return result
 
 def real_time_mode(socket, supported_pids, interval=1):
     try:
@@ -81,26 +109,3 @@ def real_time_mode(socket, supported_pids, interval=1):
             time.sleep(interval)
     except KeyboardInterrupt:
         print("Выход из режима реального времени.")
-
-def parse_supported_pids(raw_response):
-    """
-    Парсит очищенные сырые данные ответа ELM327 и возвращает множество поддерживаемых PID.
-    """
-    try:
-        # Преобразуем ответ в список байтов
-        raw_bytes = bytes.fromhex(raw_response[4:])  # Пропускаем "41 XX"
-        supported_pids = set()
-
-        # Проходим по каждому байту и извлекаем поддерживаемые PID
-        for byte_index, byte in enumerate(raw_bytes):
-            for bit_index in range(8):
-                if byte & (1 << (7 - bit_index)):  # Проверяем, установлен ли бит
-                    pid = byte_index * 8 + bit_index + 1  # Рассчитываем PID
-                    supported_pids.add(pid)
-
-        return supported_pids
-
-    except Exception as e:
-        print(f"Error parsing response: {e}")
-        return set()
-

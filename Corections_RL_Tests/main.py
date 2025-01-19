@@ -1,6 +1,6 @@
 # main.py
 from connection import OBD2Connection
-from fucntionality import check_pid_support, real_time_mode, save_results_to_file
+from fucntionality import check_pid_support, real_time_mode
 from commands import OBD2_COMMANDS, send_command
 from decoder import parse_response
 
@@ -29,7 +29,6 @@ def main():
         print("2 - Реальное время")
         print("3 - Ручной ввод")
         print("4 - Декодирование ошибок")
-        print("5 - Сохранить результаты")
         print("0 - Выход")
 
         mode = input("Выберите режим: ")
@@ -51,9 +50,6 @@ def main():
         elif mode == "4":
             response = send_command(connection.socket, "03")
             print("Коды ошибок:", response)
-        elif mode == "5":
-            data_to_save = {"supported_pids": list(supported_pids)}
-            save_results_to_file(data_to_save)
         elif mode == "0":
             break
 
