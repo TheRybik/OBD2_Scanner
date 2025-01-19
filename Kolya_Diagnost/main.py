@@ -1,21 +1,38 @@
-from fucntionality import real_time_mode, check_pid_support
+# main.py
+from connection import OBD2Connection
+from fucntionality import check_pid_support, real_time_mode, save_results_to_file
 from commands import OBD2_COMMANDS, send_command
 from decoder import parse_response
-from connection import OBD2Connection
 
 def main():
-    # Подключение к OBD2-сканеру
-    connection = OBD2Connection("83:A4:96:4D:7E:AF", 1) #Сделать вводом от пользователя мак адрес, добавить пояснение как найти инфу.
-    connection.connect()
+    # Запрашиваем MAC-адрес и порт у пользователя
+    mac_address = input("Введите MAC-адрес устройства OBD2: ")
+    port = int(input("Введите порт для подключения (обычно 1): "))
 
+    # Подключение к OBD2-сканеру
+    connection = OBD2Connection()
+    connection.connect(mac_address, port)
+
+    OBD2Connection.initialize_connection(connection.socket)
+
+    # Настройка ELM327
     send_command(connection.socket, "ATZ")
     send_command(connection.socket, "ATE0")
 
+    # Проверка поддерживаемых PID
     supported_pids = check_pid_support(connection.socket)
     print(f"Поддерживаемые PID: {supported_pids}")
 
     while True:
-        mode = input("Выберите режим (1 - Сканирование, 2 - Реальное время, 3 - Ручной ввод, 0 - Выход): ") #Добавить режимы связанные с ошибками, отправкой результатов тестов в БД.
+        print("\nМеню:")
+        print("1 - Сканирование поддерживаемых PID")
+        print("2 - Реальное время")
+        print("3 - Ручной ввод")
+        print("4 - Декодирование ошибок")
+        print("5 - Сохранить результаты")
+        print("0 - Выход")
+
+        mode = input("Выберите режим: ")
         if mode == "1":
             data = {}
             for pid in supported_pids:
@@ -23,16 +40,19 @@ def main():
                     response = send_command(connection.socket, pid)
                     if response:
                         data[pid] = parse_response(pid, response)
+            print("Результаты сканирования:", data)
         elif mode == "2":
             real_time_mode(connection.socket, supported_pids)
         elif mode == "3":
-            print("Доступные PID:")
-            for pid, description in OBD2_COMMANDS.items():
-                print(f"{pid}: {description['description']}")
-
             user_command = input("Введите команду: ")
             response = send_command(connection.socket, user_command)
-            print(response)
+            print("Ответ:", response)
+        elif mode == "4":
+            response = send_command(connection.socket, "03")
+            print("Коды ошибок:", response)
+        elif mode == "5":
+            data_to_save = {"supported_pids": list(supported_pids)}
+            save_results_to_file(data_to_save)
         elif mode == "0":
             break
 

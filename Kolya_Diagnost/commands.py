@@ -61,12 +61,18 @@ ERROR_CODES = {                     # Расписать подробнее ка
 #         print(f"Ошибка при отправке команды: {e}")
 #         return None
 
+def clear_buffer(socket):
+    while socket.recv(1024):
+        pass
+
+
 def send_command(socket, command):
     try:
         socket.send((command + "\r").encode('utf-8'))
+        time.sleep(1)
         response = socket.recv(1024)
-        # Декодируем с 'latin-1' и убираем ненужные символы:
-        return response.decode('latin-1', errors='ignore').strip()
+        # Декодируем с 'utf-8' и убираем ненужные символы:
+        return response.decode('utf-8', errors='ignore').strip()
     except Exception as e:
         print(f"Error in send_command: {e}")
         return None
