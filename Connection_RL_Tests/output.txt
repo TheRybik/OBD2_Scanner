@@ -312,3 +312,1538 @@ ATRV: Напряжение аккумулятора
 5 - Сохранить результаты
 0 - Выход
 Выберите режим:
+
+
+
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 010C
+Выбранные команды:
+010C: Обороты двигателя
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+Ответ для 010C: 
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 010C: None
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+{}
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 56, in <module>
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 32, in main
+    mode = input("Выберите режим: ")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0120, Raw Response: 41 20 A0 05 B0 11 
+Cleaned Response: 4120A005B011
+> Command: 0140, Raw Response: 41 40 FE D0 04 00 
+Cleaned Response: 4140FED00400
+> Command: 0160, Raw Response: NO DATA
+Cleaned Response: NODATA
+, error: Invalid response format: NODATA
+Поддерживаемые PID: ['0101', '0103', '0104', '0105', '0106', '0107', '010B', '010C', '010D', '010E', '010F', '0111', '0113', '0115', '011C', '011F', '0120', '0121', '0123', '012E', '0130', '0131', '0133', '0134', '013C', '0140', '0141', '0142', '0143', '0144', '0145', '0146', '0147', '0149', '014A', '014C', '0156']
+Поддерживаемые PID: {'011F', '013C', '0156', '0113', '0143', '0123', '0121', '0141', '0149', '010D', '0115', '0131', '0130', '012E', '0142', '0105', '0106', '011C', '0103', '0104', '0120', '010C', '0146', '014A', '0134', '0111', '0107', '010F', '0101', '010E', '014C', '0140', '010B', '0144', '0145', '0147', '0133'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 010D
+Выбранные команды:
+010D: Скорость автомобиля
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+Ответ для 010D: 
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 010D: None
+{}
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 3
+Введите команду: 010D
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+Ответ: None
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 56, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 32, in main
+    mode = input("Выберите режим: ")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0120, Raw Response: 41 20 A0 05 B0 11 
+Cleaned Response: 4120A005B011
+> Command: 0140, Raw Response: 41 40 FE D0 04 00 
+Cleaned Response: 4140FED00400
+> Command: 0160, Raw Response: NO DATA
+Cleaned Response: NODATA
+, error: Invalid response format: NODATA
+Поддерживаемые PID: ['0101', '0103', '0104', '0105', '0106', '0107', '010B', '010C', '010D', '010E', '010F', '0111', '0113', '0115', '011C', '011F', '0120', '0121', '0123', '012E', '0130', '0131', '0133', '0134', '013C', '0140', '0141', '0142', '0143', '0144', '0145', '0146', '0147', '0149', '014A', '014C', '0156']
+Поддерживаемые PID: {'0143', '0134', '010B', '0140', '014A', '010D', '0130', '0115', '0123', '010F', '0156', '012E', '011F', '014C', '0101', '011C', '0149', '0106', '0113', '0107', '010E', '0111', '0103', '0144', '0141', '0104', '0145', '0146', '0147', '0131', '0133', '013C', '010C', '0121', '0120', '0105', '0142'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 3
+Введите команду: 010D
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 56, in <module>
+    if __name__ == "__main__":
+        ^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 32, in main
+    mode = input("Выберите режим: ")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0120, Raw Response: 41 20 A0 05 B0 11 
+Cleaned Response: 4120A005B011
+> Command: 0140, Raw Response: 41 40 FE D0 04 00 
+Cleaned Response: 4140FED00400
+> Command: 0160, Raw Response: NO DATA
+Cleaned Response: NODATA
+, error: Invalid response format: NODATA
+Поддерживаемые PID: ['0101', '0103', '0104', '0105', '0106', '0107', '010B', '010C', '010D', '010E', '010F', '0111', '0113', '0115', '011C', '011F', '0120', '0121', '0123', '012E', '0130', '0131', '0133', '0134', '013C', '0140', '0141', '0142', '0143', '0144', '0145', '0146', '0147', '0149', '014A', '014C', '0156']
+Поддерживаемые PID: {'0121', '0105', '0149', '0141', '0104', '0120', '0140', '010C', '0131', '0101', '010B', '011F', '010F', '0147', '0103', '0133', '0142', '012E', '0106', '0115', '0130', '0134', '010D', '010E', '0143', '0156', '014C', '011C', '0107', '0111', '0113', '0146', '014A', '013C', '0123', '0145', '0144'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 3
+Введите команду: 010D
+----------------
+Ответ: 0 км/ч
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 010C
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 3
+Введите команду: 010C
+----------------
+Ответ: None
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 3
+Введите команду: 010D
+----------------
+Ответ: 0 км/ч
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 010A
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 3
+Введите команду: 010C
+----------------
+Ответ: 748.5 RPM
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 010C
+Выбранные команды:
+010C: Обороты двигателя
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 010C: None
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 010C: None
+{}
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+Выберите режим: 3
+Введите команду: 010C
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+----------------
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 46, in main
+    answer = parse_response(user_command, response)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\decoder.py", line 130, in parse_response
+    parts = response.split()
+            ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'split'
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Error in send_command: time.sleep() takes exactly one argument (2 given)
+Command ATZ, Response: None
+Error in send_command: time.sleep() takes exactly one argument (2 given)
+Command ATE0, Response: None
+Command ATSP0, Response: None
+Error in send_command: time.sleep() takes exactly one argument (2 given)
+Command ATS0, Response: None
+Error in send_command: time.sleep() takes exactly one argument (2 given)
+Error in send_command: time.sleep() takes exactly one argument (2 given)
+Error in send_command: time.sleep() takes exactly one argument (2 given)
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 21, in main
+    supported_pids = check_pid_support(connection.socket)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\fucntionality.py", line 16, in check_pid_support
+    time.sleep(2)
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Command ATZ, Response: ATZ
+>KTE0nd ATE0, Response: ELM327 v1.5
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+>1 00 BE 3E A8 13 aw Response: 0100
+Cleaned Response: 01004100BE3EA813
+, error: Invalid response format: 01004100BE3EA813
+> Command: 0100, Raw Response: 0100
+Cleaned Response: 0100
+, error: Invalid response format: 0100
+41 20 A0 05 B0 11Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA81301204120A005B011
+>1 40 FE D0 04 00 aw Response: >0140
+Cleaned Response: 01404140FED00400
+, error: Invalid response format: 01404140FED00400
+>O DATAnd: 0160, Raw Response: 0160
+Cleaned Response: 0160NODATA
+, error: Invalid response format: 0160NODATA
+Поддерживаемые PID: ['0121', '0123', '0124', '0125', '0126', '0127', '012B', '012C', '012D', '012E', '012F', '0131', '0133', '0135', '013C', '013F', '0140', '0148', '014B', '0152', '0158', '015B', '0161', '0163', '016E', '0170', '0171', '0173', '0174', '017C', '0180']
+012B', '0174', '012D', '014B', '0131', '015B', '0158', '0163', '0180', '0173', '016E', '0170', '0127'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 32, in main
+    mode = input("Выберите режим: ")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0120, Raw Response: 41 20 A0 05 B0 11 
+Cleaned Response: 4120A005B011
+> Command: 0140, Raw Response: 41 40 FE D0 04 00 
+Cleaned Response: 4140FED00400
+> Command: 0160, Raw Response: NO DATA
+Cleaned Response: NODATA
+, error: Invalid response format: NODATA
+Поддерживаемые PID: ['0101', '0103', '0104', '0105', '0106', '0107', '010B', '010C', '010D', '010E', '010F', '0111', '0113', '0115', '011C', '011F', '0120', '0121', '0123', '012E', '0130', '0131', '0133', '0134', '013C', '0140', '0141', '0142', '0143', '0144', '0145', '0146', '0147', '0149', '014A', '014C', '0156']
+Поддерживаемые PID: {'013C', '0111', '010E', '014A', '011F', '0120', '0107', '0106', '0115', '012E', '0147', '0156', '0143', '0121', '0113', '011C', '0131', '014C', '0140', '0149', '0144', '0142', '0105', '0103', '010B', '0130', '010D', '010C', '010F', '0145', '0146', '0104', '0123', '0133', '0141', '0101', '0134'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 3
+Введите команду: 010C
+----------------
+Ответ: 746.0 RPM
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 010C
+Выбранные команды:
+010C: Обороты двигателя
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+Ответ для 010C: 41 0C 0B A2
+----------------
+{'010C': '744.5 RPM'}
+>твет для 010C: >41 0C 0B 64 
+----------------
+{'010C': None}
+>твет для 010C: 41 0C 0B B8 
+----------------
+{'010C': '750.0 RPM'}
+>твет для 010C: 41 0C 0B AA 
+----------------
+{'010C': '746.5 RPM'}
+>твет для 010C: 41 0C 0B BA 
+----------------
+{'010C': '750.5 RPM'}
+>твет для 010C: 41 0C 0B C4 
+----------------
+{'010C': '753.0 RPM'}
+>твет для 010C: 41 0C 0B C8 
+----------------
+{'010C': '754.0 RPM'}
+>твет для 010C: 41 0C 0B B8 
+----------------
+{'010C': '750.0 RPM'}
+>твет для 010C: 41 0C 0B B8 
+----------------
+{'010C': '750.0 RPM'}
+>твет для 010C: 41 0C 0B B0 
+----------------
+{'010C': '748.0 RPM'}
+>твет для 010C: 41 0C 0B BA 
+----------------
+{'010C': '750.5 RPM'}
+>твет для 010C: 41 0C 0B BC 
+----------------
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 32, in main
+    mode = input("Выберите режим: ")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> cd ..
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> git add .
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> git commit -m "Working. Needs fixes with cleaning the responses"
+[master fe349e3] Working. Needs fixes with cleaning the responses
+ 38 files changed, 2807 insertions(+), 629 deletions(-)
+ create mode 100644 Connection_RL_Tests/__pycache__/commands.cpython-311.pyc
+ create mode 100644 Connection_RL_Tests/__pycache__/connection.cpython-311.pyc
+ create mode 100644 Connection_RL_Tests/__pycache__/decoder.cpython-311.pyc
+ create mode 100644 Connection_RL_Tests/__pycache__/fucntionality.cpython-311.pyc
+ create mode 100644 Connection_RL_Tests/commands.py
+ create mode 100644 Connection_RL_Tests/connection.py
+ create mode 100644 Connection_RL_Tests/db.py
+ create mode 100644 Connection_RL_Tests/decoder.py
+ create mode 100644 Connection_RL_Tests/dtc.py
+ create mode 100644 Connection_RL_Tests/fucntionality.py
+ create mode 100644 Connection_RL_Tests/main.py
+ create mode 100644 Connection_RL_Tests/output.txt
+ delete mode 100644 Test_IRL/Main.py
+ delete mode 100644 Test_IRL/TAWT.py
+ delete mode 100644 Test_IRL/Web_Flask_Ver/main.py
+ delete mode 100644 Test_IRL/Web_Flask_Ver/templates/index.html
+ delete mode 100644 Test_IRL/connection_test.py
+ delete mode 100644 Test_IRL/connection_test_com.py
+ delete mode 100644 Test_IRL/connection_test_gpt.py
+ create mode 100644 obd2_scanner/manage.py
+ create mode 100644 obd2_scanner/obd2/admin.py
+ create mode 100644 obd2_scanner/obd2/apps.py
+ create mode 100644 obd2_scanner/obd2/connection_utils.py
+ create mode 100644 obd2_scanner/obd2/migrations/__init__.py
+ create mode 100644 obd2_scanner/obd2/models.py
+ create mode 100644 obd2_scanner/obd2/tests.py
+ create mode 100644 obd2_scanner/obd2/urls.py
+ create mode 100644 obd2_scanner/obd2/views.py
+ create mode 100644 obd2_scanner/obd2_scanner/__init__.py
+ create mode 100644 obd2_scanner/obd2_scanner/__pycache__/__init__.cpython-311.pyc
+ create mode 100644 obd2_scanner/obd2_scanner/__pycache__/settings.cpython-311.pyc
+ create mode 100644 obd2_scanner/obd2_scanner/settings.py
+ create mode 100644 obd2_scanner/obd2_scanner/urls.py
+Enumerating objects: 39, done.
+Counting objects: 100% (39/39), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (34/34), done.
+Writing objects: 100% (36/36), 44.87 KiB | 1.55 MiB/s, done.
+Total 36 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/TheRybik/OBD2_Scanner.git
+To https://github.com/TheRybik/OB2_Scanner.git
+   18e3bca..fe349e3  master -> master
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> python .\main.py
+C:\Users\burla\AppData\Local\Programs\Python\Python311\python.exe: can't open file 'C:\\Users\\burla\\OneDrive\\Рабочий стол\\Diploma\\main.py': [Errno 2] No such file or directory
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> cd .\Connection_RL_Tests\
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Подключение к ELM327 успешно.
+Command ATZ, Response: <filter object at 0x0000022362A7D990>
+Command ATE0, Response: <filter object at 0x0000022362A7DA20>
+Command ATSP0, Response: <filter object at 0x0000022362A7D960>
+Command ATS0, Response: <filter object at 0x0000022362A7D9F0>
+Error processing command 0100: 'filter' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 21, in main
+    supported_pids = check_pid_support(connection.socket)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\fucntionality.py", line 16, in check_pid_support
+    time.sleep(2)
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Command ATZ, Response: None
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Command ATE0, Response: None
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Command ATSP0, Response: None
+Command ATS0, Response: None
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Error processing command 0100: 'NoneType' object has no attribute 'strip'
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 21, in main
+    supported_pids = check_pid_support(connection.socket)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\fucntionality.py", line 16, in check_pid_support
+    time.sleep(2)
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Command ATZ, Response: None
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Command ATE0, Response: None
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Command ATSP0, Response: None
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 15, in main
+    OBD2Connection.initialize_connection(connection.socket)
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\connection.py", line 72, in initialize_connection
+    time.sleep(1)  # Задержка между командами
+    ^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Command ATE0, Response: None
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Command ATSP0, Response: None
+Error in send_command: descriptor 'isdigit' for 'str' objects doesn't apply to a 'int' object
+Command ATS0, Response: None
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 15, in main
+    OBD2Connection.initialize_connection(connection.socket)
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\connection.py", line 72, in initialize_connection
+    ^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 13, in main
+    connection.connect(mac_address, port)
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\connection.py", line 57, in connect
+    self.socket.connect((mac_address, port))
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\bluetooth\msbt.py", line 96, in connect
+    bt.connect (self._sockfd, addr, port)
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Command ATZ, Response: 32715
+Command ATE0, Response: 0
+Error in send_command: invalid literal for int() with base 10: ''
+Command ATSP0, Response: None
+Error in send_command: invalid literal for int() with base 10: ''
+Command ATS0, Response: None
+Error in send_command: invalid literal for int() with base 10: ''
+Error processing command 0100: 'int' object has no attribute 'strip'
+Error processing command 0120: 'int' object has no attribute 'strip'
+Error processing command 0140: 'int' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 21, in main
+    supported_pids = check_pid_support(connection.socket)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\fucntionality.py", line 15, in check_pid_support
+    raw_response = send_command(socket, command)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\commands.py", line 61, in send_command
+    time.sleep(1)
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Error in send_command: descriptor 'isalnum' for 'str' objects doesn't apply to a 'int' object
+Error in send_command: descriptor 'isalnum' for 'str' objects doesn't apply to a 'int' object
+Command ATE0, Response: None
+Error in send_command: descriptor 'isalnum' for 'str' objects doesn't apply to a 'int' object
+Command ATSP0, Response: None
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 15, in main
+    OBD2Connection.initialize_connection(connection.socket)
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\connection.py", line 70, in initialize_connection
+    response = send_command(socket, cmd)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\commands.py", line 61, in send_command
+    time.sleep(1)
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Command ATZ, Response: BXFCRRELM327V15RR
+Command ATE0, Response: BATE0ROKRR
+Command ATSP0, Response: BOKRR
+> Command: 0100, Raw Response: B4100BE3EA813RR
+Cleaned Response: B4100BE3EA813RR
+, error: Invalid response format: B4100BE3EA813RR
+> Command: 0100, Raw Response: B4100BE3EA813RR
+Cleaned Response: B4100BE3EA813RR
+, error: Invalid response format: B4100BE3EA813RR
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 21, in main
+    supported_pids = check_pid_support(connection.socket)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\fucntionality.py", line 16, in check_pid_support
+    time.sleep(2)
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Command ATZ, Response: BXFCRRELM327V15RR
+Command ATE0, Response: BATE0ROKRR
+Command ATSP0, Response: BOKRR
+Command ATS0, Response: BOKRR
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 15, in main
+    OBD2Connection.initialize_connection(connection.socket)
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\connection.py", line 72, in initialize_connection
+    time.sleep(1)  # Задержка между командами
+    ^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Command ATZ, Response: 32715
+Command ATE0, Response: 0
+Error in send_command: invalid literal for int() with base 10: ''
+Command ATSP0, Response: None
+Error in send_command: invalid literal for int() with base 10: ''
+Command ATS0, Response: None
+Error processing command 0100: 'int' object has no attribute 'strip'
+Error processing command 0120: 'int' object has no attribute 'strip'
+Error processing command 0140: 'int' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 21, in main
+    supported_pids = check_pid_support(connection.socket)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\fucntionality.py", line 15, in check_pid_support
+    raw_response = send_command(socket, command)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\commands.py", line 61, in send_command
+    time.sleep(1)
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Command ATZ, Response: 32715
+Command ATE0, Response: 0
+Error in send_command: invalid literal for int() with base 10: ''
+Command ATSP0, Response: None
+Error in send_command: invalid literal for int() with base 10: ''
+Command ATS0, Response: None
+Error in send_command: invalid literal for int() with base 10: ''
+> Command: 0100, Raw Response: 10041003813
+Cleaned Response: 10041003813
+Error processing command 0100: 'int' object has no attribute 'startswith'
+> Command: 0100, Raw Response: 10041003813
+Cleaned Response: 10041003813
+Error processing command 0100: 'int' object has no attribute 'startswith'
+> Command: 0120, Raw Response: 1204120005011
+Cleaned Response: 1204120005011
+> Command: 0140, Raw Response: 140414000400
+Cleaned Response: 140414000400
+Error processing command 0140: 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 21, in main
+    supported_pids = check_pid_support(connection.socket)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\fucntionality.py", line 15, in check_pid_support
+    raw_response = send_command(socket, command)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\commands.py", line 61, in send_command
+    time.sleep(1)
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Error in send_command: invalid literal for int() with base 10: 'BATZRXFCRRELM327V15RR'
+Error in send_command: invalid literal for int() with base 10: 'BATE0ROKRR'
+Command ATE0, Response: None
+Error in send_command: invalid literal for int() with base 10: 'BOKRR'
+Command ATSP0, Response: None
+Error in send_command: invalid literal for int() with base 10: 'BOKRR'
+Command ATS0, Response: None
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 15, in main
+    OBD2Connection.initialize_connection(connection.socket)
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\connection.py", line 72, in initialize_connection
+    time.sleep(1)  # Задержка между командами
+    ^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 1
+Введите порт для подключения (обычно 1): Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 9, in main
+    port = int(input("Введите порт для подключения (обычно 1): "))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+Error in send_command: invalid literal for int() with base 10: 'BXFCRRELM327V15RR'
+Command ATZ, Response: None
+Error in send_command: invalid literal for int() with base 10: 'BATE0ROKRR'
+Command ATE0, Response: None
+Error in send_command: invalid literal for int() with base 10: 'BOKRR'
+Command ATSP0, Response: None
+Error in send_command: invalid literal for int() with base 10: 'BOKRR'
+Error in send_command: invalid literal for int() with base 10: 'BXFCRRELM327V15RR'
+Error in send_command: invalid literal for int() with base 10: 'BATE0ROKRR'
+Error in send_command: invalid literal for int() with base 10: 'B4100BE3EA813RR'
+> Command: 0100, Raw Response: None
+Error processing command 0100: 'NoneType' object is not iterable
+Error in send_command: invalid literal for int() with base 10: 'B4100BE3EA813RR'
+Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 21, in main
+    supported_pids = check_pid_support(connection.socket)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\fucntionality.py", line 16, in check_pid_support
+    time.sleep(2)
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+>1 00 BE 3E A8 13 aw Response: 0100
+Cleaned Response: 01004100BE3EA813
+, error: Invalid response format: 01004100BE3EA813
+>1 00 BE 3E A8 13 aw Response: 0100
+Cleaned Response: 01004100BE3EA813
+, error: Invalid response format: 01004100BE3EA813
+>1 20 A0 05 B0 11 aw Response: 0120
+Cleaned Response: 01204120A005B011
+, error: Invalid response format: 01204120A005B011
+>1 40 FE D0 04 00 aw Response: 0140
+Cleaned Response: 01404140FED00400
+, error: Invalid response format: 01404140FED00400
+>O DATAnd: 0160, Raw Response: 0160
+Cleaned Response: 0160NODATA
+, error: Invalid response format: 0160NODATA
+Поддерживаемые PID: set()
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 32, in main
+    mode = input("Выберите режим: ")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0120, Raw Response: 41 20 A0 05 B0 11 
+Cleaned Response: 4120A005B011
+> Command: 0140, Raw Response: 41 40 FE D0 04 00 
+Cleaned Response: 4140FED00400
+> Command: 0160, Raw Response: NO DATA
+Cleaned Response: NODATA
+, error: Invalid response format: NODATA
+Поддерживаемые PID: ['0101', '0103', '0104', '0105', '0106', '0107', '010B', '010C', '010D', '010E', '010F', '0111', '0113', '0115', '011C', '011F', '0120', '0121', '0123', '012E', '0130', '0131', '0133', '0134', '013C', '0140', '0141', '0142', '0143', '0144', '0145', '0146', '0147', '0149', '014A', '014C', '0156']
+Поддерживаемые PID: {'0104', '010C', '0134', '0106', '0113', '0130', '0147', '0141', '013C', '0140', '0115', '0107', '010F', '0156', '010B', '0143', '014C', '0144', '011F', '0149', '011C', '0146', '0145', '010E', '0103', '0142', '0105', '0120', '0123', '0131', '0101', '010D', '012E', '0121', '0111', '0133', '014A'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 1
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+----------------
+Результаты сканирования: {'0104': '17.6%', '010C': '749.0 RPM', '0147': '12.2%', '010F': '39 °C', '010B': '33 kPa', '0143': '0.0%', '014C': '2.4%', '0144': '1.00 λ', 
+'011F': '5096 seconds', '0149': '13.7%', '0145': '2.0%', '010E': '3.5°', '0142': '0.056 V', '0105': '89 °C', '0123': '10 kPa', '010D': '0 км/ч', '012E': '30.2%', '0111': '12.2%', '0133': '99 kPa', '014A': '13.7%'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 3
+Введите команду: 010C
+----------------
+Ответ: 746.5 RPM
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 014C
+Выбранные команды:
+014C: Привод дроссельной заслонки
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+Ответ для 014C: 
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 014C: None
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 014C: None
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 014C: None
+{}
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+object address  : 00000208B8BA71C0
+object refcount : 2
+object type     : 00007FFFD0F5D410
+object type name: EOFError
+object repr     : EOFError()
+lost sys.stderr
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> 
+Результаты сканирования: {'0104': '17.6%', '010C': '749.0 RPM', '0147': '12.2%', '010F': '39 °C', '010B': '33 kPa', '0143': '0.0%', '014C': '2.4%', '0144': '1.00 λ', 
+'011F': '5096 seconds', '0149': '13.7%', '0145': '2.0%', '010E': '3.5°', '0142': '0.056 V', '0105': '89 °C', '0123': '10 kPa', '010D': '0 км/ч', '012E': '30.2%', '0111': '12.2%', '0133': '99 kPa', '014A': '13.7%'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 3
+Введите команду: 010C
+----------------
+Ответ: 746.5 RPM
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 014C
+Выбранные команды:
+014C: Привод дроссельной заслонки
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+Ответ для 014C: 
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 014C: None
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 014C: None
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 014C: None
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+object address  : 00000208B8BA71C0
+object refcount : 2
+object type     : 00007FFFD0F5D410
+object type name: EOFError
+object repr     : EOFError()
+lost sys.stderr
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0120, Raw Response: 41 20 A0 05 B0 11 
+Cleaned Response: 4120A005B011
+> Command: 0140, Raw Response: 41 40 FE D0 04 00 
+Cleaned Response: 4140FED00400
+> Command: 0160, Raw Response: NO DATA
+Cleaned Response: NODATA
+, error: Invalid response format: NODATA
+Поддерживаемые PID: ['0101', '0103', '0104', '0105', '0106', '0107', '010B', '010C', '010D', '010E', '010F', '0111', '0113', '0115', '011C', '011F', '0120', '0121', '0123', '012E', '0130', '0131', '0133', '0134', '013C', '0140', '0141', '0142', '0143', '0144', '0145', '0146', '0147', '0149', '014A', '014C', '0156']
+Поддерживаемые PID: {'0134', '012E', '010C', '0133', '013C', '0145', '0144', '0103', '0104', '0121', '0142', '0156', '010F', '011F', '010B', '0143', '0106', '0123', '0141', '0131', '0147', '0101', '0146', '010E', '0140', '0107', '0149', '0130', '011C', '0120', '014A', '010D', '014C', '0111', '0105', '0115', '0113'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 0104
+Выбранные команды:
+0104: Нагрузка на двигатель
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+Ответ для 0104: 
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 0104: None
+{}
+
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 32, in main
+    mode = input("Выберите режим: ")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0120, Raw Response: 41 20 A0 05 B0 11 
+Cleaned Response: 4120A005B011
+> Command: 0140, Raw Response: 41 40 FE D0 04 00 
+Cleaned Response: 4140FED00400
+> Command: 0160, Raw Response: NO DATA
+Cleaned Response: NODATA
+, error: Invalid response format: NODATA
+Поддерживаемые PID: ['0101', '0103', '0104', '0105', '0106', '0107', '010B', '010C', '010D', '010E', '010F', '0111', '0113', '0115', '011C', '011F', '0120', '0121', '0123', '012E', '0130', '0131', '0133', '0134', '013C', '0140', '0141', '0142', '0143', '0144', '0145', '0146', '0147', '0149', '014A', '014C', '0156']
+Поддерживаемые PID: {'011F', '0115', '0107', '0105', '0104', '0111', '0147', '0103', '0120', '0140', '0146', '0113', '010D', '0131', '0141', '0156', '010C', '014A', '0130', '0143', '0133', '011C', '0145', '0149', '010E', '0106', '0121', '014C', '013C', '0123', '0142', '010B', '0134', '010F', '0144', '012E', '0101'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 010D
+Выбранные команды:
+010D: Скорость автомобиля
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+>твет для 010D: 41 0D 00 
+----------------
+{'010D': '0 км/ч'}
+>твет для 010D: 41 0D 00 
+----------------
+{'010D': '0 км/ч'}
+>твет для 010D: 41 0D 00 
+----------------
+{'010D': '0 км/ч'}
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 014C
+Выбранные команды:
+014C: Привод дроссельной заслонки
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+>твет для 014C: 41 4C 07 
+----------------
+{'014C': '2.7%'}
+>твет для 014C: 41 4C 07 
+----------------
+{'014C': '2.7%'}
+>твет для 014C: 41 4C 07 
+----------------
+{'014C': '2.7%'}
+>твет для 014C: 41 4C 07 
+----------------
+{'014C': '2.7%'}
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 010F
+Выбранные команды:
+010F: Температура воздуха на впуске
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+>41 0F 4F 010F: 41 4C 06 
+----------------
+{'010F': '-34 °C'}
+>твет для 010F: 41 0F 4F 
+----------------
+{'010F': '39 °C'}
+>твет для 010F: 41 0F 4F 
+----------------
+{'010F': '39 °C'}
+>твет для 010F: 41 0F 4F 
+----------------
+{'010F': '39 °C'}
+>твет для 010F: 41 0F 4F 
+----------------
+{'010F': '39 °C'}
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2   
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 0111,0145,0147,014A
+Выбранные команды:
+0111: Открытие дроссельной заслонки
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+014A: Положение педали акселератора E
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+Ответ для 0111: 
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 0145: None
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 0147: None
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 014A: None
+{}
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 0111: None
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Ответ для 0145: None
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 57, in <module>
+    main()
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests\main.py", line 32, in main
+    mode = input("Выберите режим: ")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests> python .\main.py
+Введите MAC-адрес устройства OBD2: 83:A4:96:4D:7E:AF
+Введите порт для подключения (обычно 1): 1
+Подключение к ELM327 успешно.
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0100, Raw Response: 41 00 BE 3E A8 13 
+Cleaned Response: 4100BE3EA813
+> Command: 0120, Raw Response: 41 20 A0 05 B0 11 
+Cleaned Response: 4120A005B011
+> Command: 0140, Raw Response: 41 40 FE D0 04 00 
+Cleaned Response: 4140FED00400
+> Command: 0160, Raw Response: NO DATA
+Cleaned Response: NODATA
+, error: Invalid response format: NODATA
+Поддерживаемые PID: ['0101', '0103', '0104', '0105', '0106', '0107', '010B', '010C', '010D', '010E', '010F', '0111', '0113', '0115', '011C', '011F', '0120', '0121', '0123', '012E', '0130', '0131', '0133', '0134', '013C', '0140', '0141', '0142', '0143', '0144', '0145', '0146', '0147', '0149', '014A', '014C', '0156']
+Поддерживаемые PID: {'011F', '0133', '0105', '012E', '0121', '0147', '0142', '0143', '0145', '0111', '0149', '011C', '0101', '0146', '0120', '010D', '0123', '0106', '010B', '0141', '014A', '0156', '014C', '0113', '0130', '010F', '010E', '0131', '0134', '0144', '010C', '0103', '0104', '0140', '0115', '0107', '013C'}
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 0145
+Выбранные команды:
+0145: Относительное положение дроссельной заслонки
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+>твет для 0145: 41 45 05 
+----------------
+{'0145': '2.0%'}
+>твет для 0145: 41 45 05 
+----------------
+{'0145': '2.0%'}
+>твет для 0145: 41 45 05 
+----------------
+{'0145': '2.0%'}
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: 2
+Режим реального времени. Нажмите Ctrl+C для выхода.
+Доступные команды для выбора:
+0104: Нагрузка на двигатель
+0105: Температура охлаждающей жидкости
+010B: Давление на впуске
+010C: Обороты двигателя
+010D: Скорость автомобиля
+010E: Угол опережения зажигания
+010F: Температура воздуха на впуске
+0111: Открытие дроссельной заслонки
+011F: Время, прошедшее с запуска двигателя
+0123: Давление направляющей-распределителя для топлива
+012E: Степень открытия клапана EVAP
+0133: Атмосферное давление (абсолютное)
+0142: Напряжение контрольного модуля
+0143: Абсолютное значение нагрузки
+0144: Лямбда значение
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+0149: Положение педали акселератора D
+014A: Положение педали акселератора E
+014C: Привод дроссельной заслонки
+Введите через запятую PID-ы интересующих команд: 0111,0145,0147,014A
+Выбранные команды:
+0111: Открытие дроссельной заслонки
+0145: Относительное положение дроссельной заслонки
+0147: Абсолютное положение дроссельной заслонки B
+014A: Положение педали акселератора E
+Начинаю сбор данных. Нажмите Ctrl+C для выхода.
+>твет для 0111: 41 11 1F 
+----------------
+>твет для 0145: 41 45 05 
+----------------
+>твет для 0147: 41 47 1F 
+----------------
+>твет для 014A: 41 4A 23 
+----------------
+{'0111': '12.2%', '0145': '2.0%', '0147': '12.2%', '014A': '13.7%'}
+>твет для 0111: 41 11 1F 
+----------------
+>твет для 0145: 41 45 05 
+----------------
+>твет для 0147: 41 47 1F 
+----------------
+>твет для 014A: 41 4A 23 
+----------------
+{'0111': '12.2%', '0145': '2.0%', '0147': '12.2%', '014A': '13.7%'}
+>твет для 0111: 41 11 1F 
+----------------
+>твет для 0145: 41 45 05 
+----------------
+>твет для 0147: 41 47 1F 
+----------------
+>твет для 014A: 41 4A 23 
+----------------
+{'0111': '12.2%', '0145': '2.0%', '0147': '12.2%', '014A': '13.7%'}
+Выход из режима реального времени.
+
+Меню:
+1 - Сканирование поддерживаемых PID
+2 - Реальное время
+3 - Ручной ввод
+4 - Декодирование ошибок
+0 - Выход
+Выберите режим: Traceback (most recent call last):
+object address  : 0000019E5BA071C0
+object refcount : 2
+object type     : 00007FFFD0F5D410
+object type name: EOFError
+object repr     : EOFError()
+lost sys.stderr
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\Connection_RL_Tests>      

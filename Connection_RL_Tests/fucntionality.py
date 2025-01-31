@@ -78,7 +78,7 @@ def real_time_mode(socket, supported_pids, interval=1):
             data = {}
             for pid in selected_pids:
                     response = send_command(socket, pid)
-                    time.sleep(1)
+                    time.sleep(0.5)
                     print(f"Ответ для {pid}: {response}") 
                     if response:
                         data[pid] = parse_response(pid, response)
