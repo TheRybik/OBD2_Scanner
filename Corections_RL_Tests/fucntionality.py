@@ -1,8 +1,6 @@
-# functionality.py
 from commands import OBD2_COMMANDS, send_command
 from decoder import parse_response
 import time
-import json
 
 def check_pid_support(socket):
     """
@@ -14,7 +12,6 @@ def check_pid_support(socket):
 
     for command in commands:
         try:
-            # Отправляем команду и получаем ответ
             raw_response = send_command(socket, command)
             print(f"> Command: {command}, Raw Response: {raw_response.strip()}")
 
@@ -22,7 +19,6 @@ def check_pid_support(socket):
             cleaned_response = ''.join(filter(str.isalnum, raw_response)).upper() # Эти моменты мб стоит вынести в сам send_command, или в отдельную функцию
             print(f"Cleaned Response: {cleaned_response}")
 
-            # Проверяем длину и формат
             if not cleaned_response.startswith("41") or len(cleaned_response) < 8:
                 print(f", error: Invalid response format: {cleaned_response}")
                 continue
@@ -79,7 +75,7 @@ def real_time_mode(socket, supported_pids, interval=1):
         while True:
             data = {}
             for pid in selected_pids:
-                # if pid in supported_pids:
+                if pid in supported_pids:
                     time.sleep(1)
                     response = send_command(socket, pid)
                     print(f"Ответ для {pid}: {response}") 

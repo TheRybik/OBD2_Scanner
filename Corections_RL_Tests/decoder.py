@@ -89,11 +89,8 @@ def ecu_name(parts):
         ecu_data = ''.join(chr(int(byte, 16)) for byte in parts[3:])
         return ecu_data.strip()
 
-
-# Функция для парсинга кодов ошибок
 def error_codes(parts):
     if len(parts) >= 3 and parts[0] == '03':
-        # Проверяем, если код '43 00' - это отсутствие ошибок
         if parts[1] == '43' and parts[2] == '00':
             return "Ошибки не найдены."
         
@@ -109,10 +106,6 @@ def error_codes(parts):
             return "Ошибки не найдены."
     return f"Ошибка при парсинге кодов ошибок. Ответ: {parts}"
 
-
-
-
-# Mapping of decoders to their functions
 DECODER_FUNCTIONS = {
     "percent": percent,
     "temp": temp,
@@ -129,7 +122,7 @@ DECODER_FUNCTIONS = {
     "lambda": lambbda,
     "vin": vin,
     "ecu_name": ecu_name,
-    "error_codes": error_codes,  # Добавляем новый декодер для кодов ошибок
+    "error_codes": error_codes,
 }
 
 def parse_response(command, response):

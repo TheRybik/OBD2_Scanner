@@ -1,4 +1,3 @@
-# connection.py
 import bluetooth
 from commands import OBD2_COMMANDS, send_command
 import time

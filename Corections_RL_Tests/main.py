@@ -1,25 +1,20 @@
-# main.py
 from connection import OBD2Connection
 from fucntionality import check_pid_support, real_time_mode
 from commands import OBD2_COMMANDS, send_command
 from decoder import parse_response
 
 def main():
-    # Запрашиваем MAC-адрес и порт у пользователя
     mac_address = input("Введите MAC-адрес устройства OBD2: ")
     port = int(input("Введите порт для подключения (обычно 1): "))
 
-    # Подключение к OBD2-сканеру
     connection = OBD2Connection()
     connection.connect(mac_address, port)
 
     OBD2Connection.initialize_connection(connection.socket)
 
-    # Настройка ELM327
     send_command(connection.socket, "ATZ")
     send_command(connection.socket, "ATE0")
 
-    # Проверка поддерживаемых PID
     supported_pids = check_pid_support(connection.socket)
     print(f"Поддерживаемые PID: {supported_pids}")
 
