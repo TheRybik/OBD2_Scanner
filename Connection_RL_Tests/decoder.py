@@ -126,7 +126,7 @@ DECODER_FUNCTIONS = {
 }
 
 def parse_response(command, response):
-    print("----------------")
+    # print("----------------")
     parts = response.split()
     decoder = OBD2_COMMANDS.get(command, {}).get("decoder")
     decode_function = DECODER_FUNCTIONS.get(decoder)
