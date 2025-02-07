@@ -75,11 +75,14 @@ function formatRealTimeData(data) {
     }
 }
 
-// Функции для отображения данных
 async function getSupportedPids() {
     const response = await fetch('/supported_pids', { method: 'GET' });
     const data = await response.json();
-    document.getElementById('supported_pids_output').innerHTML = formatSupportedPids(data);
+    if (data.success) {
+        document.getElementById('supported_pids_output').innerHTML = formatSupportedPids(data);
+    } else {
+        document.getElementById('supported_pids_output').innerHTML = `<div class="error-text">${data.message}</div>`;
+    }
 }
 
 async function decodeErrorCodes() {

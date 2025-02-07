@@ -21,6 +21,10 @@ class OBD2Connection:
         self.socket = None
 
     def connect(self, device_name, port=1):
+        # Закрываем сокет, если он уже открыт
+        if self.socket:
+            self.disconnect()
+
         mac_address = self.find_device_by_name(device_name)
         if not mac_address:
             return False, f"Device '{device_name}' not found."
@@ -34,16 +38,25 @@ class OBD2Connection:
 
     def disconnect(self):
         if self.socket:
-            self.socket.close()
-            return True, "Disconnected."
+            try:
+                self.socket.close()
+                self.socket = None
+                return True, "Disconnected."
+            except Exception as e:
+                return False, f"Error while disconnecting: {e}"
         return False, "No active connection."
+
+    def is_connected(self):
+        return self.socket is not None
 
     def initialize_connection(self):
         commands = ["ATZ", "ATE0", "ATSP0", "ATS0"]
         for cmd in commands:
             response = send_command(self.socket, cmd)
             print(f"Command {cmd}, Response: {response}")
-            time.sleep(0.5)
+            time.sleep(1)
+        send_command(self.socket, "ATZ")
+        send_command(self.socket, "ATE0")
 
     @staticmethod
     def find_device_by_name(target_name):
@@ -59,6 +72,10 @@ def clear_buffer(socket):
         pass
 
 def send_command(socket, command):
+    if not socket:
+        print("Socket is not connected.")
+        return None
+
     try:
         socket.send((command + "\r").encode('utf-8'))
         time.sleep(1)
@@ -241,6 +258,10 @@ def parse_response(command, response):
     return "Не удалось распознать ответ"
 
 def check_pid_support(socket):
+    if not socket:
+        print("Socket is not connected.")
+        return set()
+
     commands = ["0100", "0120", "0140", "0160"]
     supported_pids = set()
     multiplier = 0
@@ -248,8 +269,10 @@ def check_pid_support(socket):
     for command in commands:
         try:
             raw_response = send_command(socket, command)
-            cleaned_response = ''.join(filter(str.isalnum, raw_response)).upper()
+            if not raw_response:
+                continue
 
+            cleaned_response = ''.join(filter(str.isalnum, raw_response)).upper()
             if not cleaned_response.startswith("41") or len(cleaned_response) < 8:
                 continue
 
@@ -320,11 +343,14 @@ def real_time_data():
         if response:
             results[pid] = parse_response(pid, response)
         time.sleep(interval)
-    
+    print(results)
     return jsonify({"success": True, "data": results})
 
 @app.route('/supported_pids', methods=['GET'])
 def supported_pids():
+    if not obd2_connection.is_connected():
+        return jsonify({"success": False, "message": "Not connected to OBD2 device."})
+    
     supported_pids = check_pid_support(obd2_connection.socket)
     return jsonify({"success": True, "supported_pids": list(supported_pids)})
 
