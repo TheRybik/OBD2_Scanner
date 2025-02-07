@@ -282,7 +282,7 @@ def check_pid_support(socket):
 
         except Exception as e:
             print(f"Error processing command {command}: {e}")
-    
+    print(supported_pids)
     return supported_pids
 
 def Availaible_PID_Parser(hex_number, x=0):
@@ -343,6 +343,7 @@ def real_time_data():
         if response:
             results[pid] = parse_response(pid, response)
         time.sleep(interval)
+    time.sleep(2)
     print(results)
     return jsonify({"success": True, "data": results})
 
