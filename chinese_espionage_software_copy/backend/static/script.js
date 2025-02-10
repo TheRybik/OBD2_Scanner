@@ -103,6 +103,11 @@ function showPage(pageId) {
         page.style.display = 'none';
     });
     document.getElementById(pageId).style.display = 'block';
+
+    // Инициализация графика при переходе на страницу Real-Time Data
+    if (pageId === 'real_time_data') {
+        initializeChart();
+    }
 }
 
 // Сетап Chart.js
@@ -192,18 +197,33 @@ function initializeChart() {
             scales: {
                 x: {
                     type: 'linear',
-                    position: 'bottom'
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Time'
+                    }
                 },
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Value'
+                    }
                 }
-            }
+            },
+            responsive: true,
+            maintainAspectRatio: false
         }
     });
 }
 
 // Начать сбор данных в реальном времени
 function startRealTimeData() {
+    if (!chart) {
+        console.error("Chart is not initialized!");
+        return;
+    }
+
     console.log("Start Real-Time Data button clicked!"); // Отладка
     const pids = document.getElementById('pids').value.split(',');
     const interval = document.getElementById('interval').value * 1000;
@@ -264,6 +284,13 @@ function fetchRealTimeData(pids) {
     });
 }
 
+// Инициализация графика при загрузке страницы
+$(document).ready(function () {
+    console.log("Initializing chart...");
+    initializeChart();
+});
+
+// Обновить график новыми данными
 // Обновить график новыми данными
 function updateChart(data) {
     const time = new Date().toLocaleTimeString();
@@ -271,7 +298,16 @@ function updateChart(data) {
 
     Object.keys(data).forEach((pid, index) => {
         const value = parseFloat(data[pid]) || 0;
-        chart.data.datasets[index].data.push(value);
+        if (!chart.data.datasets[index]) {
+            chart.data.datasets.push({
+                label: OBD2_COMMANDS[pid]?.description || pid,
+                data: [value],
+                borderColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+                fill: false
+            });
+        } else {
+            chart.data.datasets[index].data.push(value);
+        }
     });
 
     // Ограничить количество точек на графике (например, последние 50)
@@ -282,12 +318,6 @@ function updateChart(data) {
 
     chart.update();
 }
-
-// Инициализация графика при загрузке страницы
-$(document).ready(function () {
-    console.log("Initializing chart...");
-    initializeChart();
-});
 
 // Прекратить сбор Real-Time данных
 function stopRealTimeData() {
@@ -321,4 +351,37 @@ async function sendManualCommand() {
     });
     const data = await response.json();
     document.getElementById('manual_input_output').innerHTML = formatManualInputOutput(data);
+}
+
+// Сканирование всех доступных PID
+async function scanAllPids() {
+    const response = await fetch('/supported_pids', { method: 'GET' });
+    const data = await response.json();
+    if (data.success) {
+        const pids = data.supported_pids;
+        const outputElement = document.getElementById('supported_pids_output');
+        outputElement.innerHTML = '<div class="scanning-text">Scanning PIDs...</div>';
+
+        for (let i = 0; i < pids.length; i++) {
+            const pid = pids[i];
+            const commandResponse = await fetch('/send_command', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: pid })
+            });
+            const commandData = await commandResponse.json();
+
+            if (commandData.success) {
+                const pidDescription = OBD2_COMMANDS[pid]?.description || 'Unknown';
+                const pidResponse = commandData.response;
+                const pidHtml = `<div class="pid-result"><strong>${pid} (${pidDescription}):</strong> ${pidResponse}</div>`;
+                outputElement.innerHTML += pidHtml;
+            }
+
+            // Ждем 2 секунды перед следующим запросом
+            await new Promise(resolve => setTimeout(resolve, 2000));
+        }
+    } else {
+        document.getElementById('supported_pids_output').innerHTML = `<div class="error-text">${data.message}</div>`;
+    }
 }

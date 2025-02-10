@@ -1773,3 +1773,42 @@ Press CTRL+C to quit
 127.0.0.1 - - [10/Feb/2025 11:39:28] "GET /supported_pids HTTP/1.1" 200 -
 PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> ^C
 PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> 
+
+
+
+
+
+
+
+Вывод консоли F12, линии на графике все еще нет, хотя оси обновляются:
+Uncaught Error: Canvas is already in use. Chart with ID '0' must be destroyed before the canvas with ID 'real_time_chart' can be reused.
+    at new An (chart.js:19:89869)
+    at initializeChart (script.js:190:13)
+    at showPage (script.js:109:9)
+    at HTMLAnchorElement.onclick ((index):13:72)
+An @ chart.js:19
+initializeChart @ script.js:190
+showPage @ script.js:109
+onclick @ (index):13Understand this errorAI
+script.js:227 Start Real-Time Data button clicked!
+script.js:267 Fetching real-time data for PIDs: ['010C']
+script.js:274 Data received: {data: {…}, success: true}
+10XHR finished loading: POST "<URL>".
+script.js:267 Fetching real-time data for PIDs: ['010C']
+script.js:274 Data received: {data: {…}, success: true}data: {010C: '828.5 RPM'}success: true[[Prototype]]: Object
+script.js:267 Fetching real-time data for PIDs: ['010C']
+script.js:274 Data received: {data: {…}, success: true}
+script.js:267 Fetching real-time data for PIDs: ['010C']
+script.js:274 Data received: {data: {…}, success: true}
+script.js:267 Fetching real-time data for PIDs: ['010C']
+script.js:274 Data received: {data: {…}, success: true}data: 010C: "833.5 RPM"[[Prototype]]: Objectsuccess: true[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+script.js:267 Fetching real-time data for PIDs: ['010C']
+script.js:274 Data received: {data: {…}, success: true}
+script.js:267 Fetching real-time data for PIDs: ['010C']
+script.js:274 Data received: {data: {…}, success: true}
+script.js:267 Fetching real-time data for PIDs: ['010C']
+script.js:274 Data received: {data: {…}, success: true}
+script.js:267 Fetching real-time data for PIDs: ['010C']
+script.js:274 Data received: {data: {…}, success: true}
+script.js:267 Fetching real-time data for PIDs: ['010C']
+script.js:274 Data received: {data: {…}, success: true}

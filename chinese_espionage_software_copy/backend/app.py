@@ -282,6 +282,7 @@ def check_pid_support(socket):
 
         except Exception as e:
             print(f"Error processing command {command}: {e}")
+    supported_pids = sorted(supported_pids)
     print(supported_pids)
     return supported_pids
 
