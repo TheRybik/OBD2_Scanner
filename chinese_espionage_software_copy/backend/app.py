@@ -332,7 +332,6 @@ def send_command_endpoint():
 def real_time_data():
     data = request.json
     pids = data.get('pids', [])
-    interval = data.get('interval', 1)
     
     if not pids:
         return jsonify({"success": False, "message": "At least one PID is required."}), 400
@@ -342,9 +341,10 @@ def real_time_data():
         response = send_command(obd2_connection.socket, pid)
         if response:
             results[pid] = parse_response(pid, response)
-        time.sleep(interval)
-    time.sleep(2)
-    print(results)
+        else:
+            results[pid] = 0  # Если ответа нет, используем 0
+    
+    print("Real-time data sent:", results)  # Отладка
     return jsonify({"success": True, "data": results})
 
 @app.route('/supported_pids', methods=['GET'])

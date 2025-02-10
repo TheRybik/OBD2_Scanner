@@ -1,3 +1,9 @@
+const OBD2_COMMANDS = {
+    "010C": { description: "Engine RPM" },
+    "010D": { description: "Vehicle Speed" },
+    "0105": { description: "Coolant Temperature" },
+};
+
 // Функция для форматирования поддерживаемых PID
 function formatSupportedPids(data) {
     if (data.success && data.supported_pids.length > 0) {
@@ -101,23 +107,6 @@ function showPage(pageId) {
 
 // Сетап Chart.js
 const ctx = document.getElementById('real_time_chart').getContext('2d');
-const chart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: [], // Time labels
-        datasets: [] // Data for each PID
-    },
-    options: {
-        scales: {
-            x: {
-                type: 'linear',
-                position: 'bottom'
-            }
-        }
-    }
-});
-
-let realTimeInterval = null;
 
 // async function startRealTimeData() {
 //     const pids = document.getElementById('pids').value.split(',');
@@ -186,6 +175,119 @@ async function startRealTimeData() {
         chart.update();
     }, interval);
 }
+
+let realTimeInterval = null;
+let chart = null;
+
+// Инициализация графика
+function initializeChart() {
+    const ctx = document.getElementById('real_time_chart').getContext('2d');
+    chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [], // Временные метки
+            datasets: [] // Данные для каждого PID
+        },
+        options: {
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom'
+                },
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+// Начать сбор данных в реальном времени
+function startRealTimeData() {
+    console.log("Start Real-Time Data button clicked!"); // Отладка
+    const pids = document.getElementById('pids').value.split(',');
+    const interval = document.getElementById('interval').value * 1000;
+
+    if (!pids || pids.length === 0) {
+        console.error("No PIDs entered!");
+        return;
+    }
+
+    if (!interval || interval <= 0) {
+        console.error("Invalid interval!");
+        return;
+    }
+
+    // Инициализация датасетов для графика
+    chart.data.datasets = pids.map(pid => ({
+        label: OBD2_COMMANDS[pid]?.description || pid,
+        data: [],
+        borderColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+        fill: false
+    }));
+    chart.update();
+
+    // Запуск интервала для получения данных
+    if (realTimeInterval) {
+        clearInterval(realTimeInterval); // Очистка предыдущего интервала
+    }
+    realTimeInterval = setInterval(() => {
+        fetchRealTimeData(pids);
+    }, interval);
+}
+
+// Остановить сбор данных
+function stopRealTimeData() {
+    clearInterval(realTimeInterval);
+    realTimeInterval = null;
+}
+
+// Получить данные в реальном времени
+function fetchRealTimeData(pids) {
+    console.log("Fetching real-time data for PIDs:", pids); // Отладка
+    $.ajax({
+        url: '/real_time_data',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ pids }),
+        success: function (data) {
+            console.log("Data received:", data); // Отладка
+            if (data.success) {
+                updateChart(data.data);
+            } else {
+                console.error("Failed to fetch real-time data:", data.message);
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("AJAX error:", error); // Отладка
+        }
+    });
+}
+
+// Обновить график новыми данными
+function updateChart(data) {
+    const time = new Date().toLocaleTimeString();
+    chart.data.labels.push(time);
+
+    Object.keys(data).forEach((pid, index) => {
+        const value = parseFloat(data[pid]) || 0;
+        chart.data.datasets[index].data.push(value);
+    });
+
+    // Ограничить количество точек на графике (например, последние 50)
+    if (chart.data.labels.length > 50) {
+        chart.data.labels.shift();
+        chart.data.datasets.forEach(dataset => dataset.data.shift());
+    }
+
+    chart.update();
+}
+
+// Инициализация графика при загрузке страницы
+$(document).ready(function () {
+    console.log("Initializing chart...");
+    initializeChart();
+});
 
 // Прекратить сбор Real-Time данных
 function stopRealTimeData() {
