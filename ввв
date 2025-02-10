@@ -1,0 +1,1775 @@
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> cd .\chinese_espionage_software\backend\
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 10:43:02] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:43:02] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:43:02] "GET /static/script.js HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:43:02] "GET /favicon.ico HTTP/1.1" 404 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 10:43:29] "POST /connect HTTP/1.1" 200 -
+{'0141', '0143', '0145', '0101', '013C', '010F', '0149', '014A', '0111', '0105', '010B', '0130', '0107', '014C', '011C', '0156', '011F', '0133', '0104', '0123', '0144', '0134', '0103', '0140', '010E', '010C', '0147', '0120', '0115', '0113', '0131', '0121', '012E', '010D', '0146', '0142', '0106'}
+127.0.0.1 - - [10/Feb/2025 10:43:40] "GET /supported_pids HTTP/1.1" 200 -
+192.168.88.56 - - [10/Feb/2025 10:43:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:49] "POST /send_command HTTP/1.1" 200 -
+192.168.88.56 - - [10/Feb/2025 10:43:49] "GET / HTTP/1.1" 400 -
+127.0.0.1 - - [10/Feb/2025 10:43:50] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:51] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:51] "POST /send_command HTTP/1.1" 200 -
+192.168.88.56 - - [10/Feb/2025 10:43:51] "GET /rootDesc.xml HTTP/1.1" 404 -
+127.0.0.1 - - [10/Feb/2025 10:43:52] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:52] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:53] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:53] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:53] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:54] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:54] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:54] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:54] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:55] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:55] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:55] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:55] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:56] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:56] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:56] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:56] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:57] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:57] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:57] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:57] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:57] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:58] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:58] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:58] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:58] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:58] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:02] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:02] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:02] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:02] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:02] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:18] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:18] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:18] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:18] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:21] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:44:21] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:44:21] "GET /static/script.js HTTP/1.1" 304 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 10:45:02] "POST /connect HTTP/1.1" 200 -
+{'0130', '0149', '0156', '0141', '014A', '0115', '0134', '0101', '0144', '0145', '010F', '0140', '0146', '0131', '0104', '0121', '014C', '0103', '010E', '013C', '010D', '010C', '0143', '0147', '0106', '0142', '010B', '0107', '0105', '011F', '012E', '0111', '0113', '0123', '0133', '0120', '011C'}
+127.0.0.1 - - [10/Feb/2025 10:45:12] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:47:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:47:11] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:47:11] "GET /static/script.js HTTP/1.1" 304 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 10:58:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:58:18] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:58:19] "GET /static/script.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:58:27] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:58:27] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:58:27] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:00:11] "POST /connect HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:00:17] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:00:27] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:00:36] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:00:36] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:00:36] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:01:00] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:01:08] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:01:11] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:01:17] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:01:20] "POST /manual_input HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:01:38] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:01:39] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:01:39] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:02:05] "POST /connect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [10/Feb/2025 11:02:33] "POST /disconnect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:02:33] "POST /manual_input HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:03:02] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:03:09] "POST /manual_input HTTP/1.1" 200 -
+{'010C', '0146', '0105', '011F', '0115', '0134', '0144', '0149', '011C', '0131', '0104', '0113', '0107', '0130', '010B', '010E', '013C', '0101', '0140', '0147', '0111127.0.0.1 - - [10/Feb/2025 11:03:17] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:04:21] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:04:21] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:04:21] "GET /static/script.js HTTP/1.1" 304 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:05:17] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:05:17] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:05:17] "GET /static/script.js HTTP/1.1" 304 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:13:39] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:13:39] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:13:39] "GET /static/script.js HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:14:08] "POST /connect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+127.0.0.1 - - [10/Feb/2025 11:14:30] "POST /disconnect HTTP/1.1" 200 -
+
+127.0.0.1 - - [10/Feb/2025 11:14:30] "POST /manual_input HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:14:40] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:14:40] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:14:40] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:15:07] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:15:17] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:15:21] "POST /manual_input HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:15:28] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:15:34] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:15:42] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:15:42] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:15:42] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:16:12] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:16:19] "POST /manual_input HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:16:27] "GET /supported_pids HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:16:33] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:16:38] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+127.0.0.1 - - [10/Feb/2025 11:16:47] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:16:47] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:16:47] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:17:13] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:17:18] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:17:24] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:17:27] "POST /manual_input HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:17:34] "GET /supported_pids HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:17:42] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+127.0.0.1 - - [10/Feb/2025 11:18:07] "GET /static/styles.css HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:18:34] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:18:43] "POST /manual_input HTTP/1.1" 200 -
+{'0142', '0133', '0145', '0144', '0121', '0105', '011F', '011C', '0130', '0134', '0111', '0147', '0141', '0131', '0140', '0101', '0104', '0146', '0149', '0115', '0123', '0106', '010D', '0103', '010C', '0113', '014A', '010E', '0120', '0156', '0107', '012E', '010F', '0143', '013C', '014C', '010B'}
+127.0.0.1 - - [10/Feb/2025 11:18:51] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:19:01] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:19:01] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:19:01] "GET /static/script.js HTTP/1.1" 304 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> git fetch
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> git reset --hard HEAD
+HEAD is now at 4096309 Work in progress
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:26:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:26:05] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:26:05] "GET /static/script.js HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:26:34] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:26:41] "POST /manual_input HTTP/1.1" 200 -
+', '011F', '014A', '0121', '0133', '0115', '0142', '0101', '0140', '0123', '0104', '011C', '0120', '014C', '0131', '012E', '0113'}
+127.0.0.1 - - [10/Feb/2025 11:26:50] "GET /supported_pids HTTP/1.1" 200 -
+{'010C': '827.5 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:06] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '828.5 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:08] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '832.0 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:10] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '824.5 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:12] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '832.0 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:14] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '829.0 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:15] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:27:22] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:34:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:34:26] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:34:26] "GET /static/script.js HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:34:55] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:35:03] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:35:08] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:35:11] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:35:14] "POST /manual_input HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:35:22] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:35:31] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:35:32] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:35:32] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:35:57] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:36:04] "POST /manual_input HTTP/1.1" 200 -
+{'0147', '0149', '0104', '013C', '0140', '0133', '0156', '0145', '0146', '0134', '014C', '012E', '0142', '0143', '0144', '0107', '0120', '0101', '0111', '010D', '011C', '010C', '0113', '014A', '010F', '010B', '0105', '0115', '0103', '0131', '0130', '0121', '0123', '0141', '010E', '0106', '011F'}
+127.0.0.1 - - [10/Feb/2025 11:36:12] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:37:01] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:37:01] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:37:01] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:37:31] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:37:39] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:37:42] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:37:46] "POST /manual_input HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:37:53] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:38:02] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:38:03] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:38:03] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:38:27] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:38:34] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:38:37] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:38:39] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:38:42] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:38:51] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:38:51] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:38:51] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:39:15] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:39:21] "POST /manual_input HTTP/1.1" 200 -
+{'0105', '0143', '0142', '0104', '013C', '0140', '0111', '0103', '0113', '0120', '011F', '014C', '010E', '0107', '010B', '010C', '0130', '0106', '0115', '0144', '010D', '0101', '0123', '0149', '014A', '0156', '0134', '0141', '0133', '0145', '011C', '0146', '0131', '0147', '012E', '010F', '0121'}
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> cd .\chinese_espionage_software\backend\
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 10:43:02] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:43:02] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:43:02] "GET /static/script.js HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:43:02] "GET /favicon.ico HTTP/1.1" 404 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 10:43:29] "POST /connect HTTP/1.1" 200 -
+{'0141', '0143', '0145', '0101', '013C', '010F', '0149', '014A', '0111', '0105', '010B', '0130', '0107', '014C', '011C', '0156', '011F', '0133', '0104', '0123', '0144', '0134', '0103', '0140', '010E', '010C', '0147', '0120', '0115', '0113', '0131', '0121', '012E', '010D', '0146', '0142', '0106'}
+127.0.0.1 - - [10/Feb/2025 10:43:40] "GET /supported_pids HTTP/1.1" 200 -
+192.168.88.56 - - [10/Feb/2025 10:43:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:49] "POST /send_command HTTP/1.1" 200 -
+192.168.88.56 - - [10/Feb/2025 10:43:49] "GET / HTTP/1.1" 400 -
+127.0.0.1 - - [10/Feb/2025 10:43:50] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:51] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:51] "POST /send_command HTTP/1.1" 200 -
+192.168.88.56 - - [10/Feb/2025 10:43:51] "GET /rootDesc.xml HTTP/1.1" 404 -
+127.0.0.1 - - [10/Feb/2025 10:43:52] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:52] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:53] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:53] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:53] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:54] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:54] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:54] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:54] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:55] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:55] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:55] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:55] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:56] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:56] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:56] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:56] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:57] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:57] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:57] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:57] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:57] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:58] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:58] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:58] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:58] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:58] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:43:59] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:00] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:01] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:02] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:02] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:02] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:02] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:02] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:03] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:04] "POST /send_command HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:09] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:10] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:12] "POST /send_command HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:16] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:17] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:18] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:18] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:18] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:18] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:19] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [10/Feb/2025 10:44:20] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:44:21] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:44:21] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:44:21] "GET /static/script.js HTTP/1.1" 304 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 10:45:02] "POST /connect HTTP/1.1" 200 -
+{'0130', '0149', '0156', '0141', '014A', '0115', '0134', '0101', '0144', '0145', '010F', '0140', '0146', '0131', '0104', '0121', '014C', '0103', '010E', '013C', '010D', '010C', '0143', '0147', '0106', '0142', '010B', '0107', '0105', '011F', '012E', '0111', '0113', '0123', '0133', '0120', '011C'}
+127.0.0.1 - - [10/Feb/2025 10:45:12] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:47:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:47:11] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:47:11] "GET /static/script.js HTTP/1.1" 304 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 10:58:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:58:18] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:58:19] "GET /static/script.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 10:58:27] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:58:27] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 10:58:27] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:00:11] "POST /connect HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:00:17] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:00:27] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:00:36] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:00:36] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:00:36] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:01:00] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:01:08] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:01:11] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:01:17] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:01:20] "POST /manual_input HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:01:38] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:01:39] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:01:39] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:02:05] "POST /connect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [10/Feb/2025 11:02:33] "POST /disconnect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:02:33] "POST /manual_input HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:03:02] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:03:09] "POST /manual_input HTTP/1.1" 200 -
+{'010C', '0146', '0105', '011F', '0115', '0134', '0144', '0149', '011C', '0131', '0104', '0113', '0107', '0130', '010B', '010E', '013C', '0101', '0140', '0147', '0111127.0.0.1 - - [10/Feb/2025 11:03:17] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:04:21] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:04:21] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:04:21] "GET /static/script.js HTTP/1.1" 304 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:05:17] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:05:17] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:05:17] "GET /static/script.js HTTP/1.1" 304 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:13:39] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:13:39] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:13:39] "GET /static/script.js HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:14:08] "POST /connect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+127.0.0.1 - - [10/Feb/2025 11:14:30] "POST /disconnect HTTP/1.1" 200 -
+
+127.0.0.1 - - [10/Feb/2025 11:14:30] "POST /manual_input HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:14:40] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:14:40] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:14:40] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:15:07] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:15:17] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:15:21] "POST /manual_input HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:15:28] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:15:34] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:15:42] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:15:42] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:15:42] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:16:12] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:16:19] "POST /manual_input HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:16:27] "GET /supported_pids HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:16:33] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:16:38] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+127.0.0.1 - - [10/Feb/2025 11:16:47] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:16:47] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:16:47] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:17:13] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:17:18] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:17:24] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:17:27] "POST /manual_input HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:17:34] "GET /supported_pids HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:17:42] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+127.0.0.1 - - [10/Feb/2025 11:18:07] "GET /static/styles.css HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:18:34] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:18:43] "POST /manual_input HTTP/1.1" 200 -
+{'0142', '0133', '0145', '0144', '0121', '0105', '011F', '011C', '0130', '0134', '0111', '0147', '0141', '0131', '0140', '0101', '0104', '0146', '0149', '0115', '0123', '0106', '010D', '0103', '010C', '0113', '014A', '010E', '0120', '0156', '0107', '012E', '010F', '0143', '013C', '014C', '010B'}
+127.0.0.1 - - [10/Feb/2025 11:18:51] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:19:01] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:19:01] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:19:01] "GET /static/script.js HTTP/1.1" 304 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> git fetch
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> git reset --hard HEAD
+HEAD is now at 4096309 Work in progress
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:26:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:26:05] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:26:05] "GET /static/script.js HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:26:34] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:26:41] "POST /manual_input HTTP/1.1" 200 -
+', '011F', '014A', '0121', '0133', '0115', '0142', '0101', '0140', '0123', '0104', '011C', '0120', '014C', '0131', '012E', '0113'}
+127.0.0.1 - - [10/Feb/2025 11:26:50] "GET /supported_pids HTTP/1.1" 200 -
+{'010C': '827.5 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:06] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '828.5 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:08] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '832.0 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:10] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '824.5 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:12] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '832.0 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:14] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '829.0 RPM'}
+127.0.0.1 - - [10/Feb/2025 11:27:15] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:27:22] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:34:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:34:26] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:34:26] "GET /static/script.js HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:34:55] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:35:03] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:35:08] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:35:11] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:35:14] "POST /manual_input HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:35:22] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:35:31] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:35:32] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:35:32] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:35:57] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:36:04] "POST /manual_input HTTP/1.1" 200 -
+{'0147', '0149', '0104', '013C', '0140', '0133', '0156', '0145', '0146', '0134', '014C', '012E', '0142', '0143', '0144', '0107', '0120', '0101', '0111', '010D', '011C', '010C', '0113', '014A', '010F', '010B', '0105', '0115', '0103', '0131', '0130', '0121', '0123', '0141', '010E', '0106', '011F'}
+127.0.0.1 - - [10/Feb/2025 11:36:12] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:37:01] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:37:01] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:37:01] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:37:31] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:37:39] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:37:42] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:37:46] "POST /manual_input HTTP/1.1" 200 -
+set()
+127.0.0.1 - - [10/Feb/2025 11:37:53] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:38:02] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:38:03] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:38:03] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:38:27] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:38:34] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:38:37] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:38:39] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:38:42] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2025 11:38:51] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:38:51] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Feb/2025 11:38:51] "GET /static/script.js HTTP/1.1" 304 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [10/Feb/2025 11:39:15] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2025 11:39:21] "POST /manual_input HTTP/1.1" 200 -
+{'0105', '0143', '0142', '0104', '013C', '0140', '0111', '0103', '0113', '0120', '011F', '014C', '010E', '0107', '010B', '010C', '0130', '0106', '0115', '0144', '010D', '0101', '0123', '0149', '014A', '0156', '0134', '0141', '0133', '0145', '011C', '0146', '0131', '0147', '012E', '010F', '0121'}
+127.0.0.1 - - [10/Feb/2025 11:39:28] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> ^C
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> 
