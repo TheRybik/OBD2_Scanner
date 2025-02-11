@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OBD2 Web App</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home" onclick="showPage('home')">Home</a>
+        <a href="#real_time_data" onclick="showPage('real_time_data')">Real-Time Data</a>
+        <a href="#error_codes" onclick="showPage('error_codes')">Error Codes</a>
+        <a href="#supported_pids" onclick="showPage('supported_pids')">Supported PIDs</a>
+        <a href="#manual_input" onclick="showPage('manual_input')">Manual Input</a>
+    </div>
+
+    <div class="container">
+        <!-- Home Page -->
+        <div id="home" class="page">
+            <h1>Connect to OBD2 Device</h1>
+            <div class="section">
+                <div class="input-group">
+                    <input type="text" id="device_name" placeholder="Enter device name (e.g., OBD2)">
+                </div>
+                <button class="button" onclick="connect()">
+                    <i class="fas fa-plug"></i> Connect
+                </button>
+                <div id="connect_output" class="output"></div>
+            </div>
+            <div class="section">
+                <h2>Disconnect</h2>
+                <button class="button" onclick="disconnect()">
+                    <i class="fas fa-power-off"></i> Disconnect
+                </button>
+                <div id="disconnect_output" class="output"></div>
+            </div>
+        </div>
+
+        <!-- Real-Time Data Page -->
+        <div id="real_time_data" class="page" style="display: none;">
+            <h1>Real-Time Data</h1>
+            <div class="section">
+                <div class="input-group">
+                    <input type="text" id="pids" placeholder="Enter PIDs (e.g., 010C,010D)">
+                </div>
+                <div class="input-group">
+                    <input type="number" id="interval" placeholder="Interval (seconds)" value="1">
+                </div>
+                <button class="button" onclick="startRealTimeData()">
+                    <i class="fas fa-play"></i> Start Real-Time Data
+                </button>
+                <button class="button" onclick="stopRealTimeData()">
+                    <i class="fas fa-stop"></i> Stop Real-Time Data
+                </button>
+            </div>
+            <div class="section">
+                <div class="chart-container">
+                    <canvas id="real_time_chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Codes Page -->
+        <div id="error_codes" class="page" style="display: none;">
+            <h1>Error Codes</h1>
+            <div class="section">
+                <button class="button" onclick="decodeErrorCodes()">
+                    <i class="fas fa-bug"></i> Decode Error Codes
+                </button>
+                <div class="output" id="error_codes_output"></div>
+            </div>
+        </div>
+
+        <!-- Supported PIDs Page -->
+        <div id="supported_pids" class="page" style="display: none;">
+            <h1>Supported PIDs</h1>
+            <div class="section">
+                <button class="button" onclick="getSupportedPids()">
+                    <i class="fas fa-list"></i> Get Supported PIDs
+                </button>
+                <button class="button" onclick="scanAllPids()">
+                    <i class="fas fa-search"></i> Scan All PIDs
+                </button>
+                <div class="output" id="supported_pids_output"></div>
+            </div>
+        </div>
+
+        <!-- Manual Input Page -->
+        <div id="manual_input" class="page" style="display: none;">
+            <h1>Manual Input</h1>
+            <div class="section">
+                <div class="input-group">
+                    <input type="text" id="manual_command" placeholder="Enter command (e.g., 010C)">
+                </div>
+                <button class="button" onclick="sendManualCommand()">
+                    <i class="fas fa-terminal"></i> Send Command
+                </button>
+                <div id="manual_input_output" class="output"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

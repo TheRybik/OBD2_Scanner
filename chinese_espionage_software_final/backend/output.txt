@@ -1,0 +1,1017 @@
+    self.socket.connect((mac_address, port))
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\bluetooth\msbt.py", line 96, in connect
+    bt.connect (self._sockfd, addr, port)
+
+127.0.0.1 - - [07/Feb/2025 13:35:19] "POST /connect HTTP/1.1" 500 -
+Error in send_command: Запрос на отправку или получение данных  (when sending on a datagram socket using a sendto call) no address was supplied.
+
+Error processing command 0100: 'NoneType' object is not iterable
+Error in send_command: Запрос на отправку или получение данных  (when sending on a datagram socket using a sendto call) no address was supplied.
+
+Error processing command 0120: 'NoneType' object is not iterable
+Error in send_command: Запрос на отправку или получение данных  (when sending on a datagram socket using a sendto call) no address was supplied.
+
+Error processing command 0140: 'NoneType' object is not iterable
+Error in send_command: Запрос на отправку или получение данных  (when sending on a datagram socket using a sendto call) no address was supplied.
+
+Error processing command 0160: 'NoneType' object is not iterable
+127.0.0.1 - - [07/Feb/2025 13:35:22] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 13:36:43] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 13:36:44] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 13:36:44] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 13:37:22] "GET /supported_pids HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error processing command 0100: 'NoneType' object is not iterable
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error processing command 0120: 'NoneType' object is not iterable
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error processing command 0140: 'NoneType' object is not iterable
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error processing command 0160: 'NoneType' object is not iterable
+127.0.0.1 - - [07/Feb/2025 13:37:46] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> ^C
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 13:54:40] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 13:54:40] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 13:54:40] "GET /static/script.js HTTP/1.1" 200 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 13:55:08] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 13:55:20] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 13:55:31] "GET /supported_pids HTTP/1.1" 200 -
+[2025-02-07 13:56:01,192] ERROR in app: Exception on /connect [POST]
+Traceback (most recent call last):
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend\app.py", line 306, in connect
+    success, message = obd2_connection.connect(device_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend\app.py", line 34, in connect
+    self.socket.connect((mac_address, port))
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\bluetooth\msbt.py", line 96, in connect
+    bt.connect (self._sockfd, addr, port)
+OSError: Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное 
+соединение из-за неверного отклика уже подключенного компьютера.
+
+127.0.0.1 - - [07/Feb/2025 13:56:01] "POST /connect HTTP/1.1" 500 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 13:56:20] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 13:56:20] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 13:56:20] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 13:56:41] "POST /connect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 13:57:13] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 13:57:26] "POST /disconnect HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 13:57:46] "POST /connect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 13:58:16] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 13:58:28] "POST /disconnect HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 13:59:01] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 13:59:07] "POST /manual_input HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:01:20] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:01:25] "POST /disconnect HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:01:46] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:02:16] "POST /manual_input HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:02:20] "POST /manual_input HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 14:02:52] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:02:52] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:02:52] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:03:18] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:03:28] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:03:35] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:03:44] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:04:23] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:04:23] "GET /static/script.js HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:04:27] "POST /disconnect HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:04:48] "POST /connect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:05:20] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 14:10:56] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:10:57] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:10:57] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:11:18] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:11:26] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:11:59] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:12:11] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:12:11] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:12:11] "GET /static/script.js HTTP/1.1" 304 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:12:16] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+>ommand ATZ, Response: ?
+>ommand ATE0, Response: OK
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:12:57] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:13:27] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:13:27] "POST /manual_input HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:13:31] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:13:38] "POST /disconnect HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:13:57] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:14:04] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:14:09] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:14:20] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:14:40] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:14:40] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:14:40] "GET /static/script.js HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:14:46] "POST /disconnect HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:15:06] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:15:18] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:15:22] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:15:32] "GET /supported_pids HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:16:37] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 14:17:08] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:17:08] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:17:08] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:17:30] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:17:41] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:17:45] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:17:56] "GET /supported_pids HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:18:55] "POST /real_time_data HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:18:56] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:18:57] "POST /real_time_data HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:18:59] "POST /real_time_data HTTP/1.1" 200 -
+
+127.0.0.1 - - [07/Feb/2025 14:18:59] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:19:00] "POST /real_time_data HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:19:01] "POST /real_time_data HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:19:03] "POST /real_time_data HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:19:04] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:19:04] "POST /real_time_data HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+127.0.0.1 - - [07/Feb/2025 14:19:23] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:19:23] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:19:23] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:19:44] "POST /connect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:20:14] "GET /supported_pids HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 14:20:45] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:20:45] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:20:45] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:21:07] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:21:14] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:21:18] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:21:28] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:21:47] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:21:49] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:21:51] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:21:53] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:21:55] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:21:56] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:21:58] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:22:00] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:22:02] "POST /real_time_data HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 14:24:50] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:24:50] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:24:50] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:25:14] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:25:23] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:25:27] "POST /manual_input HTTP/1.1" 200 -
+{'010C': None}
+127.0.0.1 - - [07/Feb/2025 14:25:42] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None}
+127.0.0.1 - - [07/Feb/2025 14:25:45] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None}
+127.0.0.1 - - [07/Feb/2025 14:25:47] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None}
+127.0.0.1 - - [07/Feb/2025 14:25:49] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None}
+127.0.0.1 - - [07/Feb/2025 14:25:51] "POST /real_time_data HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+Socket is not connected.
+Socket is not connected.
+{}
+127.0.0.1 - - [07/Feb/2025 14:27:28] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 14:27:29] "POST /real_time_data HTTP/1.1" 200 -
+Socket is not connected.
+Socket is not connected.
+{}
+127.0.0.1 - - [07/Feb/2025 14:27:32] "POST /real_time_data HTTP/1.1" 200 -
+Socket is not connected.
+127.0.0.1 - - [07/Feb/2025 14:27:33] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 14:27:35] "POST /real_time_data HTTP/1.1" 200 -
+Socket is not connected.
+{}
+127.0.0.1 - - [07/Feb/2025 14:27:38] "POST /real_time_data HTTP/1.1" 200 -
+Socket is not connected.
+Socket is not connected.
+{}
+127.0.0.1 - - [07/Feb/2025 14:27:40] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:27:40] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:27:41] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:27:41] "GET /static/script.js HTTP/1.1" 304 -
+{}
+127.0.0.1 - - [07/Feb/2025 14:27:41] "POST /real_time_data HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 14:27:50] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:27:51] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:27:51] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:28:15] "POST /connect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+127.0.0.1 - - [07/Feb/2025 14:28:46] "POST /disconnect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+
+127.0.0.1 - - [07/Feb/2025 14:28:46] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:28:46] "POST /manual_input HTTP/1.1" 200 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:29:15] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:29:22] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:29:32] "GET /supported_pids HTTP/1.1" 200 -
+{'010C': '1620.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:46] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1818.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:48] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1976.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:49] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '2127.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:50] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '2280.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:51] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '2213.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:51] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None}
+127.0.0.1 - - [07/Feb/2025 14:29:52] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1772.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:54] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1840.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:55] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1870.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:56] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1897.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:57] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1920.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:58] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1936.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:29:59] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1953.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:00] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '2082.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:01] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '2035.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:02] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1454.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:03] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1454.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:04] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1479.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:05] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1489.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:06] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1511.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:07] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1523.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:08] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1542.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:11] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1609.5 RPM'}
+{'010C': '1626.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:12] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1647.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:13] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None}
+127.0.0.1 - - [07/Feb/2025 14:30:14] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '1657.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:30:15] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:30:58] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> cd ..   
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software> cd ..
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> git add .
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> git commit -m "Everything except for graphs, supported pids output and full scan works"
+[master f17297b] Everything except for graphs, supported pids output and full scan works
+ 2 files changed, 36 insertions(+), 7 deletions(-)
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> git push
+Enumerating objects: 13, done.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 1.01 KiB | 343.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/TheRybik/OBD2_Scanner.git
+remote: error: GH013: Repository rule violations found for refs/heads/master.
+remote: Review all repository rules at https://github.com/TheRybik/OBD2_Scanner/rules?ref=refs%2Fheads%2Fmaster
+remote:
+remote: - Cannot update this protected ref.
+remote:
+error: failed to push some refs to 'https://github.com/TheRybik/OB2_Scanner.git'
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> 
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 1.01 KiB | 515.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/TheRybik/OBD2_Scanner.git
+To https://github.com/TheRybik/OB2_Scanner.git
+   fb34b46..f17297b  master -> master
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> cd .\chinese_espionage_software\backend\
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 14:47:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:47:13] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:47:13] "GET /static/script.js HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:47:55] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:48:04] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:48:14] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:48:42] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:48:42] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:48:42] "GET /static/script.js HTTP/1.1" 304 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+127.0.0.1 - - [07/Feb/2025 14:48:44] "POST /disconnect HTTP/1.1" 200 -
+
+Error in send_command: Сделана попытка выполнить операцию на объекте, не являющемся сокетом.
+
+Error in send_command: Сделана попытка выполнить операцию на объекте, не являющемся сокетом.
+
+
+127.0.0.1 - - [07/Feb/2025 14:48:45] "GET /supported_pids HTTP/1.1" 200 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:49:11] "POST /connect HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:49:42] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:49:51] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 14:50:04] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:50:04] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:50:04] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:50:34] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:50:43] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:50:52] "GET /supported_pids HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:52:25] "POST /send_command HTTP/1.1" 200 -
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 861 bytes | 78.00 KiB/s, done.
+From https://github.com/TheRybik/OB2_Scanner
+ * [new branch]      compare    -> origin/compare
+ * [new branch]      main       -> origin/main
+Already up to date.
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> cd ..
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software> cd ..
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> git pull
+Already up to date.
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> git fetch
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> git reset --hard HEAD
+HEAD is now at f17297b Everything except for graphs, supported pids output and full scan works
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma> cd .\chinese_espionage_software\backend\
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 14:57:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:57:43] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 14:57:43] "GET /static/script.js HTTP/1.1" 200 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:58:15] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:58:26] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:58:32] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:58:41] "GET /supported_pids HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:58:46] "POST /disconnect HTTP/1.1" 200 -
+>LM327 v1.5, Response: ATZ
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 14:59:15] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:59:21] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 14:59:30] "GET /supported_pids HTTP/1.1" 200 -
+{'010C': '799.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:59:49] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '807.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:59:51] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '810.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:59:53] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '813.5 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:59:55] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '814.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:59:56] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '811.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 14:59:59] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '806.0 RPM'}
+127.0.0.1 - - [07/Feb/2025 15:00:01] "POST /real_time_data HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+{}
+127.0.0.1 - - [07/Feb/2025 15:01:54] "POST /real_time_data HTTP/1.1" 200 -
+
+{}
+127.0.0.1 - - [07/Feb/2025 15:01:56] "POST /real_time_data HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+{}
+127.0.0.1 - - [07/Feb/2025 15:01:58] "POST /real_time_data HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+{}
+127.0.0.1 - - [07/Feb/2025 15:02:00] "POST /real_time_data HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 15:02:11] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 15:02:11] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 15:02:11] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 15:02:37] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 15:02:45] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 15:02:52] "GET /supported_pids HTTP/1.1" 200 -
+{'010C': '808.5 RPM', ' 010E': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:03:12] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '811.5 RPM', ' 010E': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:03:14] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '808.5 RPM', ' 010E': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:03:16] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '814.5 RPM', ' 010E': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:03:18] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '798.0 RPM', ' 010E': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:03:20] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '806.5 RPM', ' 010E': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:03:22] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '814.0 RPM', ' 010E': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:03:24] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010E': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:03:26] "POST /real_time_data HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+
+
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:04] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:04] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:04] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:04] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:04] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:04] "POST /real_time_data HTTP/1.1" 200 -
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+Error in send_command: Программа на вашем хост-компьютере разорвала установленное подключение.
+
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:08] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:08] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:08] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:08] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:08] "POST /real_time_data HTTP/1.1" 200 -
+{}
+127.0.0.1 - - [07/Feb/2025 15:04:08] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 15:04:14] "POST /disconnect HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 15:05:25] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 15:05:25] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 15:05:25] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 15:05:50] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 15:05:57] "POST /manual_input HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 15:06:07] "GET /supported_pids HTTP/1.1" 200 -
+{'010C': '806.0 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:22] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '813.0 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:24] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:25] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '816.5 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:26] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:27] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 15:06:28] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:29] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:30] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:31] "POST /real_time_data HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 15:06:33] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:34] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '814.5 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:35] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:06:35] "POST /real_time_data HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.56:5000
+Press CTRL+C to quit
+127.0.0.1 - - [07/Feb/2025 15:07:31] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 15:07:31] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Feb/2025 15:07:31] "GET /static/script.js HTTP/1.1" 304 -
+>ommand ATZ, Response: ELM327 v1.5
+>Kmmand ATE0, Response: ATE0
+>ommand ATSP0, Response: OK
+>ommand ATS0, Response: OK
+127.0.0.1 - - [07/Feb/2025 15:07:57] "POST /connect HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2025 15:08:05] "POST /manual_input HTTP/1.1" 200 -
+{'010C': '808.0 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:20] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '808.0 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:22] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '810.5 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:23] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '805.0 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:24] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:25] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '813.5 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:26] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:27] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:28] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:29] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '804.5 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:30] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:31] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:32] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:33] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:34] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:35] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '807.0 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:36] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:37] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:38] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:39] "POST /real_time_data HTTP/1.1" 200 -
+[2025-02-07 15:08:39,142] ERROR in app: Exception on /real_time_data [POST]
+Traceback (most recent call last):
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend\app.py", line 345, in real_time_data
+    results[pid] = parse_response(pid, response)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend\app.py", line 256, in parse_response
+    return decode_function(parts)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend\app.py", line 110, in rpm
+    value = (int(parts[2], 16) * 256 + int(parts[3], 16)) / 4
+                                       ^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 16: '>'
+127.0.0.1 - - [07/Feb/2025 15:08:39] "POST /real_time_data HTTP/1.1" 500 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:40] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:41] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': '810.0 RPM', ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:42] "POST /real_time_data HTTP/1.1" 200 -
+{'010C': None, ' 010D': 'Не удалось распознать ответ'}
+127.0.0.1 - - [07/Feb/2025 15:08:44] "POST /real_time_data HTTP/1.1" 200 -
+PS C:\Users\burla\OneDrive\Рабочий стол\Diploma\chinese_espionage_software\backend> 
