@@ -37,6 +37,9 @@ const OBD2_COMMANDS = {
     
 };
 
+let realTimeInterval = null;
+let supportedPids = []; // Список поддерживаемых PIDs
+
 // Функция для форматирования поддерживаемых PID
 function formatSupportedPids(data) {
     if (data.success && data.supported_pids.length > 0) {
@@ -137,15 +140,7 @@ function showPage(pageId) {
         page.style.display = 'none';
     });
     document.getElementById(pageId).style.display = 'block';
-
-    // Инициализация графика при переходе на страницу Real-Time Data
-    if (pageId === 'real_time_data') {
-        initializeChart();
-    }
 }
-
-// Сетап Chart.js
-const ctx = document.getElementById('real_time_chart').getContext('2d');
 
 // async function startRealTimeData() {
 //     const pids = document.getElementById('pids').value.split(',');
@@ -183,110 +178,26 @@ const ctx = document.getElementById('real_time_chart').getContext('2d');
 // }
 
 // Начать получение Real-Time
-async function startRealTimeData() {
+function startRealTimeData() {
     const pids = document.getElementById('pids').value.split(',');
     const interval = document.getElementById('interval').value * 1000;
 
-    // Инициализация датасетов
-    chart.data.datasets = pids.map(pid => ({
-        label: pid,
-        data: [],
-        borderColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-        fill: false
-    }));
-    chart.update();
-
-    // Получение данных в интервалах
-    realTimeInterval = setInterval(async () => {
-        const response = await fetch('/real_time_data', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ pids, interval: interval / 1000 })
-        });
-        const data = await response.json();
-
-        // Обновление диаграммы
-        const time = new Date().toLocaleTimeString();
-        chart.data.labels.push(time);
-        pids.forEach((pid, index) => {
-            chart.data.datasets[index].data.push(data.data[pid] || 0);
-        });
-        chart.update();
-    }, interval);
-}
-
-let realTimeInterval = null;
-let chart = null;
-
-// Инициализация графика
-function initializeChart() {
-    const ctx = document.getElementById('real_time_chart').getContext('2d');
-
-    // Уничтожить предыдущий график, если он существует
-    if (chart) {
-        chart.destroy();
-    }
-
-    // Создать новый график
-    chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: [], // Временные метки
-            datasets: [] // Данные для каждого PID
-        },
-        options: {
-            scales: {
-                x: {
-                    type: 'linear',
-                    position: 'bottom',
-                    title: {
-                        display: true,
-                        text: 'Time'
-                    }
-                },
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Value'
-                    }
-                }
-            },
-            responsive: true,
-            maintainAspectRatio: false
-        }
-    });
-}
-
-// Начать сбор данных в реальном времени
-function startRealTimeData() {
-    if (!chart) {
-        console.error("Chart is not initialized!");
+    // Проверка, что все введенные PIDs есть в OBD2_COMMANDS и supported_pids
+    const invalidPids = pids.filter(pid => !OBD2_COMMANDS[pid] || !supportedPids.includes(pid));
+    if (invalidPids.length > 0) {
+        alert(`Invalid PIDs: ${invalidPids.join(', ')}. Please enter valid PIDs.`);
         return;
     }
 
-    console.log("Start Real-Time Data button clicked!"); // Отладка
-    const pids = document.getElementById('pids').value.split(',');
-    const interval = document.getElementById('interval').value * 1000;
-
     if (!pids || pids.length === 0) {
-        console.error("No PIDs entered!");
+        alert("Please enter at least one PID.");
         return;
     }
 
     if (!interval || interval <= 0) {
-        console.error("Invalid interval!");
+        alert("Please enter a valid interval.");
         return;
     }
-
-    // Инициализация датасетов для графика
-    chart.data.datasets = pids.map(pid => ({
-        label: OBD2_COMMANDS[pid]?.description || pid,
-        data: [],
-        borderColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-        fill: false
-    }));
-    chart.update();
 
     // Запуск интервала для получения данных
     if (realTimeInterval) {
@@ -297,7 +208,6 @@ function startRealTimeData() {
     }, interval);
 }
 
-// Остановить сбор данных
 function stopRealTimeData() {
     clearInterval(realTimeInterval);
     realTimeInterval = null;
@@ -314,7 +224,7 @@ function fetchRealTimeData(pids) {
         success: function (data) {
             console.log("Data received:", data); // Отладка
             if (data.success) {
-                updateChart(data.data);
+                document.getElementById('real_time_data_output').innerHTML = formatRealTimeData(data);
             } else {
                 console.error("Failed to fetch real-time data:", data.message);
             }
@@ -325,39 +235,6 @@ function fetchRealTimeData(pids) {
     });
 }
 
-// Обновить график новыми данными
-function updateChart(data) {
-    const time = new Date().toLocaleTimeString();
-    chart.data.labels.push(time);
-
-    Object.keys(data).forEach((pid, index) => {
-        const value = parseFloat(data[pid]) || 0;
-        if (!chart.data.datasets[index]) {
-            chart.data.datasets.push({
-                label: OBD2_COMMANDS[pid]?.description || pid,
-                data: [value],
-                borderColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-                fill: false
-            });
-        } else {
-            chart.data.datasets[index].data.push(value);
-        }
-    });
-
-    // Ограничить количество точек на графике (например, последние 50)
-    if (chart.data.labels.length > 50) {
-        chart.data.labels.shift();
-        chart.data.datasets.forEach(dataset => dataset.data.shift());
-    }
-
-    chart.update();
-}
-
-// Инициализация графика при загрузке страницы
-$(document).ready(function () {
-    console.log("Initializing chart...");
-    initializeChart();
-});
 
 // Функции для отображения данных
 async function connect() {
@@ -393,7 +270,7 @@ async function scanAllPids() {
     const response = await fetch('/supported_pids', { method: 'GET' });
     const data = await response.json();
     if (data.success) {
-        const pids = data.supported_pids;
+        const pids = data.supported_pids.filter(pid => OBD2_COMMANDS[pid]); // Фильтруем только те PIDs, которые есть в OBD2_COMMANDS
         const outputElement = document.getElementById('supported_pids_output');
         outputElement.innerHTML = '<div class="scanning-text">Scanning PIDs...</div>';
 
