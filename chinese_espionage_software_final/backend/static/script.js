@@ -101,7 +101,7 @@ function formatManualInputOutput(data) {
     }
 }
 
-// Функция для форматирования реальных данных
+// Форматирование реальных данных
 function formatRealTimeData(data) {
     if (data.success && Object.keys(data.data).length > 0) {
         let html = '<table class="data-table">';
@@ -117,11 +117,17 @@ function formatRealTimeData(data) {
     }
 }
 
+// Получить поддерживаемые PIDs
 async function getSupportedPids() {
     const response = await fetch('/supported_pids', { method: 'GET' });
     const data = await response.json();
     if (data.success) {
-        document.getElementById('supported_pids_output').innerHTML = formatSupportedPids(data);
+        supportedPids = data.supported_pids.filter(pid => OBD2_COMMANDS[pid]); // Фильтруем только те PIDs, которые есть в OBD2_COMMANDS
+        console.log("Filtered supported PIDs:", supportedPids); // Отладка
+        document.getElementById('supported_pids_output').innerHTML = formatSupportedPids({
+            success: true,
+            supported_pids: supportedPids
+        });
     } else {
         document.getElementById('supported_pids_output').innerHTML = `<div class="error-text">${data.message}</div>`;
     }
@@ -142,51 +148,28 @@ function showPage(pageId) {
     document.getElementById(pageId).style.display = 'block';
 }
 
-// async function startRealTimeData() {
-//     const pids = document.getElementById('pids').value.split(',');
-//     const interval = document.getElementById('interval').value * 1000;
-
-//     // Initialize datasets for the chart
-//     chart.data.datasets = pids.map(pid => ({
-//         label: OBD2_COMMANDS[pid]?.description || pid,
-//         data: [],
-//         borderColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-//         fill: false
-//     }));
-//     chart.update();
-
-//     // Fetch data at intervals
-//     realTimeInterval = setInterval(async () => {
-//         const response = await fetch('/real_time_data', {
-//             method: 'POST',
-//             headers: { 'Content-Type': 'application/json' },
-//             body: JSON.stringify({ pids, interval: interval / 1000 })
-//         });
-//         const data = await response.json();
-
-//         // Update chart
-//         const time = new Date().toLocaleTimeString();
-//         chart.data.labels.push(time);
-//         pids.forEach((pid, index) => {
-//             chart.data.datasets[index].data.push(data.data[pid] || 0);
-//         });
-//         chart.update();
-
-//         // Update real-time data table
-//         document.getElementById('real_time_data_output').innerHTML = formatRealTimeData(data);
-//     }, interval);
-// }
-
-// Начать получение Real-Time
+// Начать сбор данных в реальном времени
 function startRealTimeData() {
     const pids = document.getElementById('pids').value.split(',');
     const interval = document.getElementById('interval').value * 1000;
 
-    // Проверка, что все введенные PIDs есть в OBD2_COMMANDS и supported_pids
-    const invalidPids = pids.filter(pid => !OBD2_COMMANDS[pid] || !supportedPids.includes(pid));
+    console.log("Entered PIDs:", pids); // Отладка
+    console.log("Supported PIDs:", supportedPids); // Отладка
+
+    // Проверка, что все введенные PIDs есть в OBD2_COMMANDS
+    const invalidPids = pids.filter(pid => !OBD2_COMMANDS[pid]);
     if (invalidPids.length > 0) {
         alert(`Invalid PIDs: ${invalidPids.join(', ')}. Please enter valid PIDs.`);
         return;
+    }
+
+    // Если supportedPids загружен, проверяем, что PIDs есть в supportedPids
+    if (supportedPids.length > 0) {
+        const unsupportedPids = pids.filter(pid => !supportedPids.includes(pid));
+        if (unsupportedPids.length > 0) {
+            alert(`Unsupported PIDs: ${unsupportedPids.join(', ')}. Please enter supported PIDs.`);
+            return;
+        }
     }
 
     if (!pids || pids.length === 0) {
@@ -208,6 +191,7 @@ function startRealTimeData() {
     }, interval);
 }
 
+// Остановить сбор данных
 function stopRealTimeData() {
     clearInterval(realTimeInterval);
     realTimeInterval = null;
@@ -234,7 +218,6 @@ function fetchRealTimeData(pids) {
         }
     });
 }
-
 
 // Функции для отображения данных
 async function connect() {
@@ -265,7 +248,7 @@ async function sendManualCommand() {
     document.getElementById('manual_input_output').innerHTML = formatManualInputOutput(data);
 }
 
-// Сканирование всех доступных PID
+// Сканирование всех доступных PIDs
 async function scanAllPids() {
     const response = await fetch('/supported_pids', { method: 'GET' });
     const data = await response.json();

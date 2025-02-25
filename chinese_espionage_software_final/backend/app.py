@@ -340,6 +340,7 @@ def real_time_data():
     results = {}
     for pid in pids:
         response = send_command(obd2_connection.socket, pid)
+        time.sleep(1)
         if response:
             results[pid] = parse_response(pid, response)
         else:
